@@ -1,0 +1,322 @@
+export type TranslationKey = keyof typeof translations.en;
+
+export const translations = {
+  en: {
+    // Navigation
+    navSolutions: "Solutions",
+    navIndustries: "Industries",
+    navTechnologies: "Technologies",
+    navProducts: "Products",
+    navServices: "Services",
+    navPartners: "Partners",
+    navProjects: "Projects",
+    navKnowledge: "Knowledge",
+    navAbout: "About",
+    navContact: "Contact",
+    navRequestSolution: "Request a Solution",
+    navRequestQuote: "Request a Quote",
+    navTalkToEngineer: "Talk to an Engineer",
+    navExploreSolutions: "Explore Solutions",
+    navFindSolution: "Find My Solution",
+    searchPlaceholder: "Search products, technologies, applications or technical topics...",
+
+    // Brand Anchors
+    heroEyebrow: "C-WATER | WATER TREATMENT ENGINEERED DIFFERENTLY",
+    heroTitle: "Water Treatment, Engineered Around Your Operation.",
+    heroSubtitle:
+      "Advanced chemistry, filtration, monitoring and control—combined with local engineering expertise to help your water systems perform with greater reliability, efficiency and control.",
+    heroMicrocopy: "Global Technology · Local Engineering · Complete Support",
+    heroCTA1: "Talk to an Engineer",
+    heroCTA2: "Explore Solutions",
+
+    // Journey
+    approachHeadline: "One Water System. One Integrated Approach.",
+    approachSub: "Diagnose → Design → Treat → Control → Monitor → Optimize",
+    stepDiagnose: "Diagnose",
+    stepDiagnoseDesc: "Understand the water, the process and the operating conditions.",
+    stepDesign: "Design",
+    stepDesignDesc: "Develop the treatment strategy around the actual system.",
+    stepTreat: "Treat",
+    stepTreatDesc: "Apply the right chemistry and treatment technologies.",
+    stepControl: "Control",
+    stepControlDesc: "Measure, dose and control critical parameters.",
+    stepMonitor: "Monitor",
+    stepMonitorDesc: "Turn operating conditions into useful information.",
+    stepOptimize: "Optimize",
+    stepOptimizeDesc: "Keep improving system performance over time.",
+
+    // Problems Section
+    problemHeadline: "Water Problems Don't Happen One Component at a Time.",
+    problemSub:
+      "Scale can become lost efficiency. Corrosion can become equipment failure. Poor filtration can affect everything downstream. Uncontrolled dosing can increase chemical consumption. Weak monitoring can turn small deviations into operational problems.",
+    problemClosing: "C-Water connects the entire treatment chain.",
+
+    // Interactive System
+    systemHeadline: "See How the Pieces Work Together.",
+    systemSub:
+      "Your water system is a chain. A change in one part can affect everything downstream. C-Water brings the components together into one engineered approach.",
+    nodeSource: "Source Water",
+    nodeFiltration: "Filtration",
+    nodeChemistry: "Chemical Treatment",
+    nodeDosing: "Chemical Dosing",
+    nodeSensing: "Sensing & Measurement",
+    nodeControl: "Process Control",
+    nodeMonitoring: "Monitoring & Telemetry",
+    nodeOptimization: "System Optimization",
+
+    // Partners
+    partnersHeadline: "Global Technology. Delivered by C-Water.",
+    partnersSub:
+      "We combine specialized technologies from established international partners with local engineering, application knowledge and technical support.",
+    walchemTagline: "Sense. Dose. Control. Connect.",
+    walchemDesc:
+      "Instrumentation and control technologies designed to bring greater visibility and precision to water-treatment processes.",
+    timexTagline: "Filter. Protect. Perform.",
+    timexDesc:
+      "Industrial filtration technologies selected around application requirements and operating conditions.",
+    kuritaTagline: "Treat. Protect. Optimize.",
+    kuritaDesc:
+      "Advanced water-treatment chemistry and application expertise focused on system performance and operational efficiency.",
+
+    // Results / Metrics
+    resultsHeadline: "Technology Means More When It Produces Results.",
+    metricProtect: "Equipment Protection",
+    metricProtectDesc: "Shield critical heat exchangers, boilers, and membranes from destructive scale and corrosion.",
+    metricReliability: "Operational Reliability",
+    metricReliabilityDesc: "Maintain continuous production uptime with automated dosing, failsafe sensing, and regular service.",
+    metricEfficiency: "Water & Energy Efficiency",
+    metricEfficiencyDesc: "Maximize concentration cycles, optimize blowdown, and minimize thermal losses.",
+    metricControl: "Intelligent Control",
+    metricControlDesc: "Precision chemical dosing governed by live sensor feedback instead of manual estimation.",
+    metricOptimization: "Continuous Optimization",
+    metricOptimizationDesc: "Ongoing analytical testing and telemetry audits to refine programs over system lifecycle.",
+    metricSupport: "Complete Support",
+    metricSupportDesc: "Local Egyptian engineering presence with rapid response, spares, and site consultancy.",
+
+    // Solution Finder
+    finderTitle: "Interactive Solution Finder",
+    finderSubtitle: "Identify the engineering starting point for your specific water stream and operational challenge.",
+    finderStep1Title: "1. What system are you working with?",
+    finderStep2Title: "2. What challenge are you seeing?",
+    finderStep3Title: "3. What is your primary objective?",
+    finderResultPrefix: "Your challenge appears to be primarily related to",
+    finderResultSuffix: "A C-Water technical assessment is the best starting point.",
+    finderCTADiscuss: "Discuss With an Engineer",
+    finderReset: "Start Over",
+
+    // Dashboard Demo
+    dashboardTitle: "Live Digital Twin Telemetry Station",
+    dashboardSubtitle: "Conceptual demonstration of connected water quality monitoring, automated dosing, and real-time control.",
+    dashboardStatus: "System Status",
+    dashboardLive: "LIVE TELEMETRY",
+    dashboardHealthy: "NORMAL / OPTIMIZED",
+    dashboardWarning: "ATTENTION REQUIRED",
+    dashboardCoolingPreset: "Cooling Tower Loop",
+    dashboardBoilerPreset: "High-Pressure Boiler",
+    dashboardROPreset: "Industrial RO Unit",
+    dashboardpH: "pH Value",
+    dashboardCond: "Conductivity",
+    dashboardORP: "ORP / Redox",
+    dashboardFlow: "Flow Rate",
+    dashboardDose: "Dosing Output",
+    dashboardSimAlarm: "Simulate Upset Condition",
+    dashboardDemoDisclaimer: "Simulated demonstration station. Real-time telemetry is integrated with Walchem controllers & C-Water engineering dashboards.",
+
+    // Final CTA
+    finalCTAHeadline: "Have a Water Problem?",
+    finalCTASub:
+      "Whether you're protecting an existing system, planning a new facility, or trying to solve a persistent water treatment challenge, start with the problem.",
+    finalCTABtn1: "Talk to a C-Water Engineer",
+    finalCTABtn2: "Request a Quote",
+
+    // RFQ & Cart
+    rfqTitle: "Quote Builder",
+    rfqEmpty: "No products added to quote yet.",
+    rfqAddSuccess: "Added to Quote",
+    rfqProceed: "Proceed to RFQ Form",
+    rfqQuantity: "Qty",
+    rfqClear: "Clear All",
+
+    // General UI
+    viewDetails: "View Details",
+    downloadDatasheet: "Download Technical Datasheet",
+    relatedProducts: "Related Products & Technologies",
+    relatedSolutions: "Related Solutions",
+    relatedArticles: "Engineering Insights",
+    allSolutions: "All Solutions",
+    allIndustries: "All Industries",
+    allProducts: "All Products",
+    filterBy: "Filter By",
+    allCategories: "All Categories",
+    allPartners: "All Partners",
+    contactUs: "Contact Us",
+    getInTouch: "Get in Touch",
+    cairoOffice: "Headquarters (6th of October)",
+    address: "6th of October, Bosla 3, Unit No. I 21, Egypt",
+    phone: "(+20) 112 229 9044 / (+20) 111 771 1444",
+    phone1: "(+20) 112 229 9044",
+    phone2: "(+20) 111 771 1444",
+    email: "engineering@cw-eg.com",
+    workingHours: "Sunday – Thursday: 8:30 AM – 5:30 PM",
+    copyright: "© 2026 C-Water Egypt. All rights reserved. Water Treatment, Engineered Around Your Operation.",
+  },
+  ar: {
+    // Navigation
+    navSolutions: "الحلول",
+    navIndustries: "القطاعات الصناعية",
+    navTechnologies: "التقنيات",
+    navProducts: "المنتجات والمعدات",
+    navServices: "الخدمات الهندسية",
+    navPartners: "شركاء التكنولوجيا",
+    navProjects: "المشاريع ودراسات الحالة",
+    navKnowledge: "مركز المعرفة",
+    navAbout: "عن C-Water",
+    navContact: "اتصل بنا",
+    navRequestSolution: "اطلب حلاً هندسياً",
+    navRequestQuote: "اطلب عرض سعر",
+    navTalkToEngineer: "تحدث إلى مهندس",
+    navExploreSolutions: "استكشف الحلول",
+    navFindSolution: "حدد الحل المناسب",
+    searchPlaceholder: "ابحث عن المنتجات، التقنيات، التطبيقات أو المواضيع الهندسية...",
+
+    // Brand Anchors
+    heroEyebrow: "C-WATER | معالجة المياه برؤية هندسية متقدمة",
+    heroTitle: "معالجة المياه. مصممة وفقاً لطبيعة تشغيلك.",
+    heroSubtitle:
+      "كيمياء متقدمة، ترشيح فائق، تحكم ومراقبة ذكية—مدمجة بالخبرة الهندسية المحلية لمساعدة أنظمة المياه لديك على العمل بأعلى موثوقية وكفاءة وأمان.",
+    heroMicrocopy: "تقنيات عالمية · هندسة محلية · دعم فني متكامل",
+    heroCTA1: "تحدث إلى مهندس",
+    heroCTA2: "استكشف الحلول",
+
+    // Journey
+    approachHeadline: "نظام مياه واحد. منهج هندسي متكامل.",
+    approachSub: "التشخيص ← التصميم ← المعالجة ← التحكم ← المراقبة ← التحسين",
+    stepDiagnose: "التشخيص",
+    stepDiagnoseDesc: "فهم طبيعة المياه، تفاصيل العمليات وظروف التشغيل الواقعية.",
+    stepDesign: "التصميم",
+    stepDesignDesc: "تطوير استراتيجية المعالجة بما يتناسب تماماً مع معايير المنظومة.",
+    stepTreat: "المعالجة",
+    stepTreatDesc: "تطبيق الكيماويات المتخصصة والتقنيات المناسبة بدقة.",
+    stepControl: "التحكم",
+    stepControlDesc: "قياس وضبط ومعايرة المتغيرات الحرجة آلياً.",
+    stepMonitor: "المراقبة",
+    stepMonitorDesc: "تحويل بيانات التشغيل إلى معلومات ورؤى هندسية قابلة للتنفيذ.",
+    stepOptimize: "التحسين",
+    stepOptimizeDesc: "التطوير المستمر لأداء المنظومة ورفع كفاءتها على المدى الطويل.",
+
+    // Problems Section
+    problemHeadline: "مشاكل المياه لا تحدث كأجزاء منفصلة.",
+    problemSub:
+      "الترسبات تتحول إلى فقدان في كفاءة التبادل الحراري. التآكل يقود إلى أعطال مكلفة وتلف المعدات. ضعف الترشيح يؤثر على كافة المراحل اللاحقة. الحقن غير المنضبط يزيد استهلاك الكيماويات. وغياب المراقبة يحول الانحرافات البسيطة إلى توقفات تشغيلية مفاجئة.",
+    problemClosing: "C-Water تربط سلسلة المعالجة بأكملها في منظومة هندسية واحدة.",
+
+    // Interactive System
+    systemHeadline: "شاهد كيف تتكامل أجزاء المنظومة.",
+    systemSub:
+      "منظومة المياه لديك سلسلة متصلة. أي تغير في مرحلة يؤثر على النظام بأكمله. C-Water تجمع كافة المكونات في حل هندسي متكامل ومحكم.",
+    nodeSource: "مياه المصدر",
+    nodeFiltration: "الترشيح والفصل",
+    nodeChemistry: "المعالجة الكيميائية",
+    nodeDosing: "الحقن الكيميائي",
+    nodeSensing: "الاستشعار والقياس",
+    nodeControl: "التحكم الآلي",
+    nodeMonitoring: "المراقبة والبيانات",
+    nodeOptimization: "التحسين المستمر",
+
+    // Partners
+    partnersHeadline: "تقنيات عالمية موثوقة. بهندسة وتنفيذ C-Water.",
+    partnersSub:
+      "نجمع بين أرقى التقنيات العالمية من شركائنا الدوليين والخبرة الهندسية المحلية، والمعرفة التطبيقية والدعم الفني الميداني المباشر.",
+    walchemTagline: "Sense. Dose. Control. Connect.",
+    walchemDesc:
+      "أجهزة القياس والتحكم ومضخات الحقن الذكية المصممة لتوفير أعلى درجات الدقة والشفافية التشغيلية في معالجة المياه.",
+    timexTagline: "Filter. Protect. Perform.",
+    timexDesc:
+      "تقنيات الترشيح الصناعي الذاتي وفلاتر الأقراص والوسائط المصممة لحماية المعدات وضمان استقرار العمليات.",
+    kuritaTagline: "Treat. Protect. Optimize.",
+    kuritaDesc:
+      "برامج المعالجة الكيميائية المتقدمة والحلول المستدامة لرفع كفاءة استهلاك المياه والطاقة وحماية الأصول الصناعية.",
+
+    // Results / Metrics
+    resultsHeadline: "للتكنولوجيا قيمة حقيقية عندما تصنع نتائج ملموسة.",
+    metricProtect: "حماية المعدات والأصول",
+    metricProtectDesc: "حماية المبادلات الحرارية، الغلايات، وأغشية التناضح العكسي من التآكل والترسبات المدمرة.",
+    metricReliability: "الموثوقية واستمرارية الإنتاج",
+    metricReliabilityDesc: "ضمان استمرار العمليات وتجنب التوقفات المفاجئة عبر الحقن الآلي والمراقبة المستمرة.",
+    metricEfficiency: "كفاءة استهلاك المياه والطاقة",
+    metricEfficiencyDesc: "زيادة دورات التركيز، ترشيد التصريف السطحي، وتقليل الفاقد الحراري.",
+    metricControl: "التحكم الذكي الدقيق",
+    metricControlDesc: "حقن كيميائي دقيق مستند إلى قراءات حساسات لحظية بدلاً من التقديرات اليدوية.",
+    metricOptimization: "التحسين المستمر للأداء",
+    metricOptimizationDesc: "تحاليل دورية ومتابعة هندسية مستمرة لملاءمة برامج المعالجة مع تغيرات التشغيل.",
+    metricSupport: "دعم هندسي محلي كامل",
+    metricSupportDesc: "فريق هندسي متخصص في مصر جاهز للاستشارات الميدانية، الصيانة وتوفير قطع الغيار.",
+
+    // Solution Finder
+    finderTitle: "الموجّه الهندسي الذكي لاختيار الحل",
+    finderSubtitle: "حدد نقطة البداية الهندسية المناسبة لمنظومتك والتحدي التشغيلي الذي تواجهه.",
+    finderStep1Title: "1. ما هي المنظومة أو تدفق المياه الذي تعمل عليه؟",
+    finderStep2Title: "2. ما هو التحدي الرئيسي الذي تلاحظه؟",
+    finderStep3Title: "3. ما هو الهدف التشغيلي الذي تسعى لتحقيقه؟",
+    finderResultPrefix: "يبدو أن التحدي التشغيلي لديك يرتبط بشكل أساسي بحلول",
+    finderResultSuffix: "التقييم الفني الشامل من مهندسي C-Water هو الخطوة المثلى للبدء.",
+    finderCTADiscuss: "ناقش الأمر مع مهندس متخصص",
+    finderReset: "إعادة البدء",
+
+    // Dashboard Demo
+    dashboardTitle: "محطة التوأم الرقمي للمراقبة اللحظية",
+    dashboardSubtitle: "عرض تجريبي تفاعلي لمراقبة جودة المياه، الحقن الآلي للكيماويات، والتحكم الذكي المباشر.",
+    dashboardStatus: "حالة المنظومة",
+    dashboardLive: "بيانات لحظية مباشرة",
+    dashboardHealthy: "تشغيل طبيعي / محسن",
+    dashboardWarning: "تنبيه تشغيلي",
+    dashboardCoolingPreset: "دائرة أبراج التبريد",
+    dashboardBoilerPreset: "غلايات الضغط العالي",
+    dashboardROPreset: "محطة التناضح العكسي (RO)",
+    dashboardpH: "الأس الهيدروجيني (pH)",
+    dashboardCond: "التوصيلية الكهربية",
+    dashboardORP: "جهد الأكسدة والاختزال",
+    dashboardFlow: "معدل التدفق",
+    dashboardDose: "معدل الحقن الكيميائي",
+    dashboardSimAlarm: "محاكاة انحراف تشغيلي",
+    dashboardDemoDisclaimer: "منصة عرض محاكاة. يتم ربط البيانات اللحظية الحقيقية عبر وحدات تحكم Walchem وبوابات المراقبة الهندسية من C-Water.",
+
+    // Final CTA
+    finalCTAHeadline: "هل تواجه تحدياً في منظومة المياه لديك؟",
+    finalCTASub:
+      "سواء كنت تسعى لحماية منظومة قائمة، تخطيط محطة جديدة، أو إيجاد حل جذري لمشكلة معالجة متكررة، ابدأ بطرح التحدي على خبرائنا.",
+    finalCTABtn1: "تحدث إلى مهندس في C-Water",
+    finalCTABtn2: "اطلب عرض سعر",
+
+    // RFQ & Cart
+    rfqTitle: "سلة عروض الأسعار والمواصفات",
+    rfqEmpty: "لم يتم إضافة منتجات إلى طلب العرض حتى الآن.",
+    rfqAddSuccess: "تمت الإضافة للطلب",
+    rfqProceed: "متابعة إلى نموذج طلب العرض",
+    rfqQuantity: "الكمية",
+    rfqClear: "مسح الكل",
+
+    // General UI
+    viewDetails: "عرض التفاصيل الهندسية",
+    downloadDatasheet: "تحميل النشرة الفنية (Datasheet)",
+    relatedProducts: "المنتجات والتقنيات المرتبطة",
+    relatedSolutions: "الحلول الهندسية ذات الصلة",
+    relatedArticles: "مقالات ومعارف هندسية",
+    allSolutions: "كافة الحلول",
+    allIndustries: "كافة القطاعات",
+    allProducts: "كافة المنتجات",
+    filterBy: "تصفية حسب",
+    allCategories: "كافة الفئات",
+    allPartners: "كافة الشركاء",
+    contactUs: "تواصل معنا",
+    getInTouch: "تواصل مع فريقنا",
+    cairoOffice: "المقر الرئيسي (السادس من أكتوبر)",
+    address: "السادس من أكتوبر، بوصلة 3، وحدة رقم I 21، مصر",
+    phone: "(+20) 112 229 9044 / (+20) 111 771 1444",
+    phone1: "(+20) 112 229 9044",
+    phone2: "(+20) 111 771 1444",
+    email: "engineering@cw-eg.com",
+    workingHours: "الأحد – الخميس: 8:30 صباحاً – 5:30 مساءً",
+    copyright: "© 2026 C-Water مصر. جميع الحقوق محفوظة. معالجة المياه، مصممة وفقاً لطبيعة تشغيلك.",
+  },
+};

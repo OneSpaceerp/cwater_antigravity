@@ -1,0 +1,172 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --primary: #008CD2;
+  --primary-dark: #0070AA;
+  --primary-glow: rgba(0, 140, 210, 0.25);
+  --cyan-accent: #00A3E0;
+  --navy-accent: #0A2540;
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --border-line: #E2E8F0;
+  --border-card: #E2E8F0;
+  --text-main: #0F172A;
+  --text-body: #334155;
+  --text-muted: #64748B;
+  --cwater-gray: #8E959D;
+}
+
+@layer base {
+  * {
+    border-color: #E2E8F0;
+  }
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    font-family: var(--font-cairo), 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Custom Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #008CD2;
+}
+
+/* Glassmorphism & Modern Industrial Light Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+}
+
+.glass-dropdown {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15), 0 0 1px 1px rgba(255, 255, 255, 0.7) inset;
+}
+
+.glass-dropdown-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-dropdown-card:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(0, 140, 210, 0.45);
+  box-shadow: 0 10px 25px -8px rgba(0, 140, 210, 0.15), 0 4px 6px rgba(15, 23, 42, 0.04);
+  transform: translateY(-1px);
+}
+
+.glass-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 140, 210, 0.5);
+  box-shadow: 0 12px 30px -10px rgba(0, 140, 210, 0.15), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+  transform: translateY(-2px);
+}
+
+.glass-glow {
+  box-shadow: 0 0 25px rgba(0, 140, 210, 0.15), inset 0 0 15px rgba(0, 163, 224, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0A2540 0%, #008CD2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #0070AA 0%, #008CD2 50%, #00A3E0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Technical Blueprint Grid Background for Light Theme */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 140, 210, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 140, 210, 0.06) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 30%, rgba(0, 140, 210, 0.08) 0%, rgba(248, 250, 252, 0) 70%);
+}
+
+/* Animations */
+@keyframes flowDash {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-water-flow {
+  stroke-dasharray: 6 6;
+  animation: flowDash 1.2s linear infinite;
+}
+
+@keyframes signalPulseLight {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 140, 210, 0.5);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(0, 140, 210, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 140, 210, 0);
+  }
+}
+
+.sensor-pulse {
+  animation: signalPulseLight 2.5s infinite;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

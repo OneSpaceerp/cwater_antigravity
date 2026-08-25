@@ -1,0 +1,465 @@
+export interface Solution {
+  id: string;
+  slug: string;
+  title: string;
+  titleAr: string;
+  heroHeadline: string;
+  heroHeadlineAr: string;
+  heroCopy: string;
+  heroCopyAr: string;
+  shortDesc: string;
+  shortDescAr: string;
+  iconName: string;
+  challenges: { title: string; titleAr: string; desc: string; descAr: string }[];
+  risks: { title: string; titleAr: string; desc: string; descAr: string }[];
+  approach: string[];
+  approachAr: string[];
+  technologies: string[];
+  recommendedProductIds: string[];
+  caseStudyIds: string[];
+  articleIds: string[];
+}
+
+export const solutionsData: Solution[] = [
+  {
+    id: "cooling-water",
+    slug: "cooling-water",
+    title: "Cooling Water Systems",
+    titleAr: "أنظمة مياه التبريد",
+    heroHeadline: "Keep Heat Transfer Working at Its Best.",
+    heroHeadlineAr: "حافظ على أعلى كفاءة للتبادل الحراري دون انقطاع.",
+    heroCopy:
+      "Cooling systems are built to move heat—not scale, corrosion, deposits and microbiological growth. C-Water brings treatment chemistry, filtration, monitoring, dosing and control together around the full cooling-water system.",
+    heroCopyAr:
+      "صُممت أنظمة التبريد لنقل الحرارة—وليس لتراكم الترسبات، التآكل، الرواسب والنمو البكتيري. تجمع C-Water بين المعالجة الكيميائية، الترشيح، الاستشعار، الحقن والتحكم الآلي حول منظومة مياه التبريد بالكامل.",
+    shortDesc:
+      "Control scale, corrosion and microbiological risk while protecting heat-transfer performance and maximizing concentration cycles.",
+    shortDescAr:
+      "التحكم في الترسبات والتآكل والمخاطر البيولوجية مع حماية كفاءة التبادل الحراري ومضاعفة دورات التركيز.",
+    iconName: "ThermometerSnowflake",
+    challenges: [
+      {
+        title: "Mineral Scale Formation",
+        titleAr: "تكون الترسبات المعدنية",
+        desc: "Calcium carbonate, silica, and sulfate deposits act as thermal insulators, degrading condenser efficiency and increasing energy consumption.",
+        descAr: "رواسب كربونات الكالسيوم والسيليكا والكبريتات تعمل كعوازل حرارية، مما يخفض كفاءة المكثفات ويزيد استهلاك الطاقة بشكل كبير.",
+      },
+      {
+        title: "Aggressive Corrosion",
+        titleAr: "التآكل العدواني للمعدات",
+        desc: "Dissolved oxygen, galvanic couplings, and acidic upsets accelerate metal loss on heat exchanger tubes, piping, and cooling tower basins.",
+        descAr: "الأكسجين الذائب والاقتران الجلفاني والانحرافات الحمضية تسرع تآكل وفقدان المعادن في أنابيب المبادلات الحرارية وأحواض الأبراج.",
+      },
+      {
+        title: "Biofouling & Legionella Risk",
+        titleAr: "النمو البيولوجي وخطر الليجيونيلا",
+        desc: "Warm aerated water fosters rapid microbial proliferation, biofilm shielding, and serious health-compliance liabilities such as Legionella.",
+        descAr: "المياه الدافئة المشبعة بالهواء تحفز تكاثر البكتيريا وتكوين الأغشية الحيوية ومخاطر الالتزام الصحي مثل بكتيريا الليجيونيلا.",
+      },
+      {
+        title: "Excessive Blowdown & Water Waste",
+        titleAr: "التصريف المفرط وهدر المياه",
+        desc: "Inadequate chemical concentration control causes unnecessary blowdown, wasting millions of liters of make-up water and expensive additives.",
+        descAr: "غياب التحكم الذكي في تركيز الأملاح يؤدي لتصريف سطحي مفرط، مما يهدر كميات هائلة من مياه التعويض والكيماويات.",
+      },
+    ],
+    risks: [
+      {
+        title: "Thermal Efficiency Loss",
+        titleAr: "فقدان الكفاءة الحرارية",
+        desc: "Even 1 mm of scale can decrease heat transfer efficiency by up to 10%, directly increasing chiller and compressor power draw.",
+        descAr: "حتى 1 مم من الترسبات يمكن أن يقلل كفاءة التبادل الحراري بنسبة 10%، مما يزيد استهلاك طاقة الضواغط والمبردات.",
+      },
+      {
+        title: "Unscheduled Production Shutdowns",
+        titleAr: "توقفات الإنتاج غير المخططة",
+        desc: "Heat exchanger tube leaks contaminate closed loops or product batches, forcing emergency plant turnarounds.",
+        descAr: "تسرب أنابيب المبادلات الحرارية يلوث الدوائر المغلقة أو خطوط الإنتاج، مما يفرض توقفاً طارئاً للمصنع.",
+      },
+    ],
+    approach: [
+      "Water Characterization & LSI / RSI Index Modeling",
+      "Automated Side-Stream & Basin Filtration (TIMEX)",
+      "High-Performance Polymeric Scale & Corrosion Inhibitors (Kurita)",
+      "Continuous Redox / Biocide Dosing & Disinfection Programs",
+      "Real-Time Conductivity & Bleed Automation (Walchem W900/W600)",
+      "Closed-Loop Data Telemetry & Life-Cycle Optimization",
+    ],
+    approachAr: [
+      "تحليل دقيق لخصائص المياه وحساب مؤشرات LSI و RSI التشبعية",
+      "ترشيح جانبي ذكي ذاتي التنظيف لحوض البرج (TIMEX)",
+      "بوليمرات متطورة لمنع الترسيب والتآكل وحماية المعادن (Kurita)",
+      "برامج حقن مطهرات ومبيدات بيولوجية بنظام الأكسدة المتحكم به",
+      "تحكم آلي متصل لقياس التوصيلية وتصريف الأملاح (Walchem W900/W600)",
+      "مراقبة لحظية وتحسين دوري لدورات التركيز على مدار العام",
+    ],
+    technologies: ["chemicals", "filtration", "dosing", "monitoring", "sensors"],
+    recommendedProductIds: ["walchem-w900", "timex-saf", "kurita-cetamine", "walchem-w600"],
+    caseStudyIds: ["industrial-cooling-tower-upgrade"],
+    articleIds: ["scale-causes-cooling-towers", "conductivity-in-cooling-towers", "cycles-of-concentration"],
+  },
+  {
+    id: "boiler-steam",
+    slug: "boiler-steam",
+    title: "Boiler & Steam Systems",
+    titleAr: "أنظمة الغلايات وتوليد البخار",
+    heroHeadline: "Protect the System That Keeps Production Moving.",
+    heroHeadlineAr: "احمِ المنظومة المحركة لخطوط الإنتاج بأعلى معايير الأمان.",
+    heroCopy:
+      "Water quality affects boiler efficiency, equipment life, maintenance and operational reliability. C-Water integrates treatment chemistry, monitoring and control around the boiler-water cycle.",
+    heroCopyAr:
+      "تؤثر جودة المياه بشكل مباشر على كفاءة الغلايات، عمر الأصول، تكاليف الصيانة والموثوقية التشغيلية. تدمج C-Water كيمياء المعالجة، المراقبة والتحكم الآلي حول دورة البخار والمياه بالكامل.",
+    shortDesc:
+      "Protect boiler, feedwater, and condensate systems against devastating scale, oxygen pitting, and condensate line corrosion.",
+    shortDescAr:
+      "حماية الغلايات، مياه التغذية، وخطوط البخار والمتكاثف من الترسبات، النقر الأكسجيني وتآكل المتكاثف.",
+    iconName: "Flame",
+    challenges: [
+      {
+        title: "Hardness Scale & Burnout",
+        titleAr: "ترسبات القساوة واحتراق الأنابيب",
+        desc: "Hardness slip through softeners forms insulating layers on tube surfaces, leading to blistering, overheating, and catastrophic tube rupture.",
+        descAr: "تسرب أيونات القساوة من أجهزة إزالة العسر يكوّن طبقات عازلة ترفع حرارة المعدن وتؤدي لانفجار أنابيب الغلاية.",
+      },
+      {
+        title: "Dissolved Oxygen Pitting",
+        titleAr: "النقر الأكسجيني العميق",
+        desc: "Oxygen ingress into economizers and boiler drums creates localized pitting attack that pierces pressure vessels in short periods.",
+        descAr: "دخول الأكسجين الذائب إلى أجهزة التسخين والأسطوانة يسبب نقراً موضعياً عميقاً يخترق جدران الضغط في فترات قياسية.",
+      },
+      {
+        title: "Condensate Line Carbonic Acid Attack",
+        titleAr: "تآكل خطوط المتكاثف بحمض الكربونيك",
+        desc: "Carbonate breakdown releases CO2 into steam, forming corrosive carbonic acid that dissolves return condensate piping and introduces iron into feedwater.",
+        descAr: "تحلل الكربونات يطلق غاز CO2 في البخار مكوناً حمض الكربونيك الذي يذيب مواسير المتكاثف ويعيد شوائب الحديد لمياه التغذية.",
+      },
+      {
+        title: "Thermal Inefficiency from Excessive Blowdown",
+        titleAr: "فقدان الطاقة بسبب التصريف العشوائي",
+        desc: "Manual or erratic bottom and surface blowdown wastes high-temperature pressurized water and expensive fuel.",
+        descAr: "التصريف السطحي والقاعي اليدوي أو غير المنضبط يهدر كميات ضخمة من المياه الساخنة المعالجة والوقود الباهظ.",
+      },
+    ],
+    risks: [
+      {
+        title: "Catastrophic Boiler Failure & Explosion Risks",
+        titleAr: "مخاطر توقف الغلاية وانفجار الأنابيب",
+        desc: "Severe overheating caused by millimetric scale can warp structural tubes, requiring costly re-tubing and weeks of facility stoppage.",
+        descAr: "ارتفاع الحرارة الشديد الناجم عن الترسبات يؤدي لتشوه وانفجار الأنابيب وتوقف كلي للإنتاج لأسابيع.",
+      },
+      {
+        title: "Massive Fuel Waste",
+        titleAr: "هدر هائل في استهلاك الوقود",
+        desc: "1.5 mm of boiler scale increases fuel consumption by 5% to 8% to generate the same steam output.",
+        descAr: "1.5 مم من الترسبات داخل الغلاية يزيد استهلاك الوقود بنسبة 5% إلى 8% لإنتاج نفس كمية البخار.",
+      },
+    ],
+    approach: [
+      "Feedwater & Deaerator Performance Audits",
+      "All-Volatile & Film-Forming Amine Chemistry (Kurita Cetamine®)",
+      "Zero-Hardness Pretreatment Monitoring & Polishing",
+      "Automated Continuous Surface Blowdown by Conductivity (Walchem)",
+      "Non-Toxic Oxygen Scavenger Dosing with Proportional Pacing",
+      "Condensate Polishing and Corrosion Monitoring",
+    ],
+    approachAr: [
+      "تدقيق كفاءة مياه التغذية ونزع الغازات الميكانيكي في المزيلات",
+      "تطبيق تكنولوجيا الأمينات الغشائية المتقدمة (Kurita Cetamine®)",
+      "مراقبة دقيقة لنقاء مياه التناضح واليسر ومنع تسرب القساوة",
+      "أتمتة التصريف السطحي المستمر بناءً على التوصيلية اللحظية (Walchem)",
+      "حقن كواشط أكسجين غير سامة متناسبة مع معدل التغذية الحقيقي",
+      "حماية وتثبيط تآكل خطوط المتكاثف وإعادة تدوير المياه النقية",
+    ],
+    technologies: ["chemicals", "dosing", "monitoring", "sensors"],
+    recommendedProductIds: ["walchem-w900", "kurita-cetamine", "walchem-e-series"],
+    caseStudyIds: ["power-utility-boiler-feedwater"],
+    articleIds: ["boiler-blowdown-energy-use", "corrosion-industrial-water-systems"],
+  },
+  {
+    id: "ro-membrane",
+    slug: "ro-membrane",
+    title: "RO & Membrane Systems",
+    titleAr: "أنظمة التناضح العكسي والأغشية",
+    heroHeadline: "Protect Membranes. Preserve Performance.",
+    heroHeadlineAr: "احمِ الأغشية وحافظ على أعلى معدلات الاستخلاص والنقاء.",
+    heroCopy:
+      "RO performance depends on everything that happens before and around the membrane. C-Water connects pretreatment, filtration, chemical protection, RO, monitoring and optimization into one treatment strategy.",
+    heroCopyAr:
+      "يعتمد أداء محطات التناضح العكسي على كل ما يحدث قبل الغشاء وحوله. تربط C-Water المعالجة الأولية، الترشيح الفائق، الحماية الكيميائية، مراقبة الضغوط والأداء في استراتيجية متكاملة.",
+    shortDesc:
+      "Protect reverse osmosis membranes against colloidal fouling, mineral scaling, and bio-growth while maximizing recovery rates.",
+    shortDescAr:
+      "حماية أغشية التناضح العكسي من الانسداد الغروي، الترسبات والنمو البكتيري مع رفع معدلات الاستخلاص.",
+    iconName: "Waves",
+    challenges: [
+      {
+        title: "Colloidal & Particulate Fouling",
+        titleAr: "الانسداد الغروي والجسيمات العالقة",
+        desc: "Silt Density Index (SDI) elevation from suspended solids plugs lead membrane elements and spikes feed pressure.",
+        descAr: "ارتفاع مؤشر كثافة الطمي (SDI) بسبب العوالق يسد مقدمة الأغشية ويرفع ضغط التغذية بشكل حاد.",
+      },
+      {
+        title: "Mineral Scaling (Silica, Calcium, Barium)",
+        titleAr: "الترسبات المعدنية غير القابلة للذوبان",
+        desc: "Concentration polarization on tail elements precipitates insoluble salts, causing irreversible membrane flux loss.",
+        descAr: "استقطاب التركيز على الأغشية النهائية يرسب أملاحاً غير ذائبة مما يسبب فقداً دائماً في تدفق المياه النقية.",
+      },
+      {
+        title: "Biological Slime & Biofouling",
+        titleAr: "تراكم الأغشية الحيوية البكتيرية",
+        desc: "Nutrient-rich feedwater feeds bacteria that build protective extracellular polysaccharides, causing massive differential pressure.",
+        descAr: "المغذيات العضوية تغذي المستعمرات البكتيرية لتكوين طبقات لزجة ترفع فرق الضغط وتخفض النقاء.",
+      },
+      {
+        title: "Frequent, Degrading Clean-in-Place (CIP)",
+        titleAr: "تكرار الغسيل الكيميائي المجهد للأغشية",
+        desc: "Unstable operating conditions necessitate constant acid/caustic CIP cycles, shortening membrane lifespan from 5 years to under 18 months.",
+        descAr: "الظروف غير المستقرة تفرض غسيلاً كيميائياً متكرراً يقصر عمر الأغشية من 5 سنوات إلى أقل من عام ونصف.",
+      },
+    ],
+    risks: [
+      {
+        title: "Irreversible Membrane Permeate Loss",
+        titleAr: "تلف الأغشية الدائم وفقدان الإنتاجية",
+        desc: "Severe silica or sulfate scaling cannot be dissolved with standard CIP, forcing full replacement of costly membrane elements.",
+        descAr: "ترسبات السيليكا والكبريتات الشديدة تستعصي على الغسيل الكيميائي مما يجبر على استبدال الأغشية المكلفة.",
+      },
+      {
+        title: "Surging Pumping Power Costs",
+        titleAr: "ارتفاع تكاليف استهلاك طاقة الضخ",
+        desc: "Differential pressure elevation forces high-pressure pumps to operate near relief limits, inflating operational kilowatt consumption.",
+        descAr: "ارتفاع فرق الضغط يجبر مضخات الضغط العالي على استهلاك أقصى طاقة مما يضخم فواتير الكهرباء.",
+      },
+    ],
+    approach: [
+      "Feedwater Complete Ion Analysis & Scaling Projection Software",
+      "High-Efficiency Automatic Screen / Disc Pre-Filtration (TIMEX)",
+      "High-Recovery Antiscalants & Dispersants (Kurita Kuriverter®)",
+      "Continuous Oxidation / Dechlorination (ORP / Bisulfite Dosing)",
+      "Normalized Permeate & Normalized Differential Pressure Telemetry",
+      "Tailored Specialized CIP Formulations & Recovery Restoration",
+    ],
+    approachAr: [
+      "تحليل أيوني شامل وبرمجة نمذجة احتمالات الترسيب المتقدمة",
+      "ترشيح أولي دقيق ذكي بشاشات وأقراص تنظيف ذاتي (TIMEX)",
+      "مشتتات ومضادات ترسيب فائقة الكفاءة لرفع الاستخلاص (Kurita Kuriverter®)",
+      "إزالة الكلور والأكسدة وحقن الميتابيسلفيت بمراقبة الـ ORP (Walchem)",
+      "مراقبة معيارية لحظية لفرق الضغط ومعدل تدفق المياه المنتجة",
+      "برامج غسيل كيميائي متخصصة (CIP) لاستعادة كفاءة الأغشية.",
+    ],
+    technologies: ["chemicals", "filtration", "dosing", "sensors", "monitoring"],
+    recommendedProductIds: ["timex-saf", "walchem-w900", "kurita-kuriverter", "walchem-e-series"],
+    caseStudyIds: ["food-beverage-ro-pretreatment"],
+    articleIds: ["ro-membrane-fouling-causes", "ro-pretreatment-failures"],
+  },
+  {
+    id: "process-water",
+    slug: "process-water",
+    title: "Process Water Treatment",
+    titleAr: "مياه العمليات الصناعية",
+    heroHeadline: "Water Quality Built Around Your Process.",
+    heroHeadlineAr: "جودة مياه مصممة خصيصاً لمتطلبات عمليتك التصنيعية.",
+    heroCopy:
+      "Your process determines the water requirements. C-Water designs treatment strategies around source water, process requirements, equipment, chemistry, quality targets and operating constraints.",
+    heroCopyAr:
+      "طبيعة عمليتك هي التي تحدد مواصفات المياه المطلوبة. تصمم C-Water استراتيجيات المعالجة حول مياه المصدر، متطلبات التصنيع، كيمياء المعالجة ومعايير الجودة والضوابط التشغيلية.",
+    shortDesc:
+      "Custom engineered water quality specifications tailored for manufacturing, pharmaceutical, chemical synthesis, and food processes.",
+    shortDescAr:
+      "مواصفات جودة مياه مهندسة خصيصاً للصناعات التحويلية، الدوائية، الكيميائية والغذائية.",
+    iconName: "Cpu",
+    challenges: [
+      {
+        title: "Strict Micro-Contaminant Thresholds",
+        titleAr: "المعايير الصارمة للملوثات الدقيقة",
+        desc: "Manufacturing processes require ultra-low limits on conductivity, silica, organics, or specific heavy metal ions.",
+        descAr: "تتطلب خطوط الإنتاج حدوداً متناهية الصغر للتوصيلية الكهربية، السيليكا، المواد العضوية أو الأيونات المعدنية.",
+      },
+      {
+        title: "Fluctuating Raw Water Quality",
+        titleAr: "تذبذب جودة مياه المصدر الخام",
+        desc: "Seasonal variability in well or surface water destabilizes downstream process water purity and product formulation.",
+        descAr: "التغير الموسمي في مياه الآبار أو القنوات يخل بنقاء مياه العمليات ويهدد جودة المنتجات النهائية.",
+      },
+    ],
+    risks: [
+      {
+        title: "Batch Contamination & Rejected Output",
+        titleAr: "تلوث خلطات الإنتاج ورفض المنتجات",
+        desc: "Sub-par process water leads directly to failed quality control audits and complete loss of expensive manufacturing batches.",
+        descAr: "عدم مطابقة مياه العمليات يسبب رفض دفعات الإنتاج وفقدان استثمارات وخامات باهظة.",
+      },
+    ],
+    approach: [
+      "End-to-End Mass Balance & Quality Target Formulation",
+      "Multi-Barrier Media, Ultrafiltration & Demineralization",
+      "Sanitary Automated Dosing & Inline Trace Instrumentation",
+      "Validated PLC/SCADA Integration & Continuous Auditing",
+    ],
+    approachAr: [
+      "حساب الموازنة المائية الشاملة وتحديد الأهداف الدقيقة للمنتج",
+      "منظومات متعددة الحواجز تشمل الوسائط، الترشيح الفائق والتبادل الأيوني",
+      "حقن ومراقبة دقيقة للأيونات بالاستشعار الآلي اللحظي",
+      "ربط متكامل مع أنظمة التحكم PLC/SCADA وتوثيق الجودة المستمر",
+    ],
+    technologies: ["filtration", "dosing", "sensors", "monitoring"],
+    recommendedProductIds: ["walchem-w900", "timex-disc", "kurita-kuriverter"],
+    caseStudyIds: ["healthcare-high-purity-water"],
+    articleIds: ["water-analysis-before-chemicals", "filtration-protects-equipment"],
+  },
+  {
+    id: "wastewater",
+    slug: "wastewater",
+    title: "Industrial Wastewater & Reuse",
+    titleAr: "معالجة مياه الصرف الصناعي وإعادة الاستخدام",
+    heroHeadline: "Better Treatment Starts With the Right Understanding.",
+    heroHeadlineAr: "معالجة الصرف الأكثر كفاءة تبدأ بالفهم الهندسي العميق.",
+    heroCopy:
+      "C-Water approaches wastewater as both a treatment challenge and an operational resource. We engineer solutions spanning characterization, coagulation/flocculation, physical separation, and tertiary polishing for compliance or zero liquid discharge (ZLD).",
+    heroCopyAr:
+      "تتعامل C-Water مع مياه الصرف الصناعي كتحدٍ بيئي ومورد تشغيلي قيم. نهندس الحلول بدءاً من التوصيف المخبري، التخثير والترويف، الفصل الفيزيائي، وحتى الترشيح الثلاثي لإعادة الاستخدام.",
+    shortDesc:
+      "Industrial effluent compliance, COD/BOD/TSS reduction, heavy metal removal, and closed-loop water recovery programs.",
+    shortDescAr:
+      "الامتثال لمعايير الصرف الصناعي، خفض COD/BOD/TSS، إزالة المعادن الثقيلة وإعادة تدوير المياه داخل المنشأة.",
+    iconName: "Recycle",
+    challenges: [
+      {
+        title: "Complex Chemical & Organic Loads",
+        titleAr: "الأحمال العضوية والكيميائية المعقدة",
+        desc: "High COD, oils, grease, surfactants, and toxic compounds that resist conventional biological or settling methods.",
+        descAr: "ارتفاع نسب COD، الزيوت، الشحوم، والمواد الخافضة للتوتر التي تستعصي على الطرق التقليدية.",
+      },
+      {
+        title: "Regulatory Non-Compliance Fines",
+        titleAr: "غرامات ومخاطر عدم الامتثال البيئي",
+        desc: "Tighter environmental effluent limits in Egypt and the region enforce strict sanctions on unauthorized discharge.",
+        descAr: "تشديد المعايير البيئية في مصر والمنطقة يفرض عقوبات صارمة على تصريف المياه غير المطابقة.",
+      },
+    ],
+    risks: [
+      {
+        title: "Environmental Sanctions & Plant Shutdown",
+        titleAr: "الإغلاق الإداري والعقوبات القانونية",
+        desc: "Failure to meet statutory discharge specifications can result in revocation of environmental permits.",
+        descAr: "عدم مطابقة مواصفات التصريف القانونية يعرض المنشأة لسحب التراخيص والإغلاق المؤقت.",
+      },
+    ],
+    approach: [
+      "Jar Testing, Treatability Studies & Effluent Characterization",
+      "Dissolved Air Flotation (DAF) & Self-Cleaning Screening (TIMEX)",
+      "Advanced Specialty Coagulants, Flocculants & Emulsion Breakers (Kurita)",
+      "Automated pH Neutralization & Polymer Dosing Stations (Walchem)",
+      "Tertiary Filtration & Membrane Polishing for Process Recycling",
+    ],
+    approachAr: [
+      "اختبارات الترويف المخبرية (Jar Testing) وتوصيف الأحمال الملوثة",
+      "أنظمة التعويم بالهواء المذاب (DAF) والشاشات ذاتية التنظيف (TIMEX)",
+      "مخثرات ومروقات بوليمرية متطورة وفواصل المستحلبات (Kurita)",
+      "محطات معادلة الـ pH وحقن البوليمر الآلية الدقيقة (Walchem)",
+      "معالجة ثلاثية بالأغشية والوسائط لتدوير المياه واستخدامها في المرافق",
+    ],
+    technologies: ["chemicals", "filtration", "dosing", "monitoring"],
+    recommendedProductIds: ["timex-daf", "walchem-w900", "kurita-cetamine"],
+    caseStudyIds: ["industrial-cooling-tower-upgrade"],
+    articleIds: ["filtration-protects-equipment", "automated-chemical-dosing"],
+  },
+  {
+    id: "potable-drinking",
+    slug: "potable-drinking",
+    title: "Potable & Drinking Water",
+    titleAr: "مياه الشرب والاستخدام الآدمي",
+    heroHeadline: "Water Quality You Can Rely On.",
+    heroHeadlineAr: "جودة مياه نقية وموثوقة تطابق أعلى المعايير الصحية.",
+    heroCopy:
+      "Safe, compliant potable water requires continuous multi-barrier protection. C-Water combines filtration, selective disinfection, remineralization, and real-time residual chlorine and pH monitoring.",
+    heroCopyAr:
+      "تتطلب مياه الشرب الآمنة حماية مستمرة متعددة الحواجز. تجمع C-Water بين الترشيح، التطهير الدقيق، إعادة ضبط الأملاح، والمراقبة اللحظية للكلور المتبقي والأس الهيدروجيني.",
+    shortDesc:
+      "Municipal, commercial, and hospitality potable water systems with strict adherence to WHO and Egyptian drinking water standards.",
+    shortDescAr:
+      "منظومات مياه الشرب للمنشآت والمجمعات وفق أعلى معايير منظمة الصحة العالمية والكود المصري.",
+    iconName: "ShieldCheck",
+    challenges: [
+      {
+        title: "Disinfection By-Product & Residual Control",
+        titleAr: "ضبط الكلور المتبقي ونواتج التطهير",
+        desc: "Balancing effective pathogen eradication with zero formation of harmful trihalomethanes and chloramines.",
+        descAr: "الموازنة بين القضاء التام على الميكروبات وعدم تكوّن مركبات التطهير الثانوية الضارة.",
+      },
+    ],
+    risks: [
+      {
+        title: "Public Health Liability & Waterborne Outbreaks",
+        titleAr: "المخاطر الصحية والملاحقات القانونية",
+        desc: "Inconsistent disinfection can expose occupants and guests to severe gastrointestinal or Legionella infections.",
+        descAr: "تذبذب كفاءة التعقيم يعرض النزلاء والعاملين لمخاطر العدوى وتلوث شبكات الشرب.",
+      },
+    ],
+    approach: [
+      "Turbidity & Suspended Solids Filtration (TIMEX)",
+      "Proportional Chlorine / Chlorine Dioxide Disinfection Dosing",
+      "Amperometric Free Chlorine & pH Closed-Loop Sensing (Walchem)",
+      "Taste, Odor & Organic Polishing with Activated Carbon",
+    ],
+    approachAr: [
+      "إزالة العكارة والشوائب بترشيح وسائط وشاشات متقدمة (TIMEX)",
+      "حقن متناسب لمطهرات الكلور وثاني أكسيد الكلور فائق النقاء",
+      "حساسات أمبيرومترية لقياس الكلور الحر والـ pH في خطوط الشبكة (Walchem)",
+      "معالجة الطعم والرائحة والمركبات العضوية بالكربون المنشط",
+    ],
+    technologies: ["filtration", "dosing", "sensors", "monitoring"],
+    recommendedProductIds: ["walchem-w600", "timex-saf"],
+    caseStudyIds: ["healthcare-high-purity-water"],
+    articleIds: ["water-analysis-before-chemicals", "orp-role-in-water-treatment"],
+  },
+  {
+    id: "industrial-water",
+    slug: "industrial-water",
+    title: "Integrated Industrial Water",
+    titleAr: "المعالجة الصناعية المتكاملة",
+    heroHeadline: "Complex Systems Need Integrated Thinking.",
+    heroHeadlineAr: "المنظومات الصناعية المعقدة تتطلب حلولاً هندسية متكاملة.",
+    heroCopy:
+      "For large manufacturing complexes, water treatment spans multiple interconnected loops: raw intake, clarification, filtration, demineralization, utility loops, and effluent recovery. C-Water provides single-source engineering ownership.",
+    heroCopyAr:
+      "في المجمعات الصناعية الكبرى، تمتد المعالجة عبر دوائر مترابطة: مآخذ المياه، الترويق، الترشيح، نزع الأملاح، دوائر المرافق، واستعادة الصرف. C-Water تمنحك شريكاً هندسياً واحداً للمنظومة ككل.",
+    shortDesc:
+      "Total water management for heavy industry, petrochemicals, power generation, and manufacturing plants.",
+    shortDescAr:
+      "إدارة شاملة لموارد ودورات المياه في الصناعات الثقيلة، البتروكيماويات ومحطات التوليد.",
+    iconName: "Factory",
+    challenges: [
+      {
+        title: "Interdependent Water Stream Cascades",
+        titleAr: "تداخل وتتابع تدفقات المياه المختلفة",
+        desc: "A failure in pretreatment cascade immediately impairs boiler, cooling, and process equipment simultaneously.",
+        descAr: "أي قصور في محطة المعالجة الأولية ينعكس فوراً على كفاءة الغلايات وأبراج التبريد وخطوط الإنتاج معاً.",
+      },
+    ],
+    risks: [
+      {
+        title: "Massive Unplanned Plant Turnarounds",
+        titleAr: "توقف المصنع بالكامل وتكبد خسائر فادحة",
+        desc: "Utility water collapse triggers emergency shutdowns costing millions in lost production and restart cycles.",
+        descAr: "انهيار منظومة مياه المرافق يفرض إيقافاً اضطرارياً للمصنع يسبب خسائر إنتاجية بملايين الجنيهات.",
+      },
+    ],
+    approach: [
+      "Master Plant Water Audit & Pinch Analysis",
+      "Unified Technology Matrix: Chemistry (Kurita) + Filtration (TIMEX) + Control (Walchem)",
+      "Centralized Digital Twin SCADA / Remote Telemetry Gateway",
+      "Comprehensive On-Site Technical Service & Chemical Management",
+    ],
+    approachAr: [
+      "تدقيق مائي شامل وموازنة استهلاك لكافة أقسام المنشأة",
+      "مصفوفة تكنولوجية موحدة: كيمياء (Kurita) + ترشيح (TIMEX) + تحكم (Walchem)",
+      "بوابة مركزية للمراقبة الرقمية اللحظية وربط الحساسات بـ SCADA",
+      "عقود إدارة وصيانة هندسية ميدانية شاملة بإشراف خبراء C-Water",
+    ],
+    technologies: ["chemicals", "filtration", "dosing", "monitoring", "sensors"],
+    recommendedProductIds: ["walchem-w900", "timex-saf", "kurita-cetamine", "timex-daf"],
+    caseStudyIds: ["industrial-cooling-tower-upgrade", "power-utility-boiler-feedwater"],
+    articleIds: ["scale-causes-cooling-towers", "automated-chemical-dosing", "remote-monitoring-water-treatment"],
+  },
+];

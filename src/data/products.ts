@@ -1,0 +1,388 @@
+import { getAssetUrl } from "@/lib/basePath";
+
+export interface Product {
+  id: string;
+  slug: string;
+  name: string;
+  nameAr: string;
+  partnerId: "walchem" | "timex" | "kurita";
+  partnerName: string;
+  category: string;
+  categoryAr: string;
+  imageUrl: string;
+  shortDesc: string;
+  shortDescAr: string;
+  fullOverview: string;
+  fullOverviewAr: string;
+  keyBenefits: string[];
+  keyBenefitsAr: string[];
+  applications: string[];
+  applicationsAr: string[];
+  specifications: { label: string; labelAr: string; value: string }[];
+  documents: { name: string; type: string; size: string }[];
+  relatedSolutionIds: string[];
+  relatedTechnologyIds: string[];
+}
+
+export const productsData: Product[] = [
+  {
+    id: "walchem-w900",
+    slug: "walchem-w900",
+    name: "Walchem W900 Series Multi-Parameter Controller",
+    nameAr: "وحدة التحكم متعددة القنوات Walchem W900",
+    partnerId: "walchem",
+    partnerName: "Walchem",
+    category: "Controllers & Automation",
+    categoryAr: "وحدات التحكم والأتمتة",
+    imageUrl: getAssetUrl("/images/products/walchem-w900.png"),
+    shortDesc:
+      "The flagship multi-parameter water controller supporting up to 8 sensor inputs, 12 relays, full graphing touchscreen, and Ethernet/Cellular cloud connectivity.",
+    shortDescAr:
+      "لوحة التحكم الرائدة لمعالجة المياه، تدعم حتى 8 حساسات و 12 مرحل تحكم، مع شاشة لمس رسومية واتصال شبكي وسحابي متقدم.",
+    fullOverview:
+      "The Walchem W900 Series provides unmatched flexibility for cooling towers, boilers, wastewater neutralization, and municipal disinfection. Its modular I/O architecture allows combining electrodeless conductivity, differential pH/ORP, disinfection sensors, flowmeters, and 4-20mA inputs in a single weather-tight enclosure.",
+    fullOverviewAr:
+      "توفر سلسلة Walchem W900 مرونة لا تضاهى لتطبيقات أبراج التبريد، الغلايات، محطات معادلة الصرف، وشبكات الشرب. تتيح بنيتها التركيبية دمج قراءات التوصيلية الحلقية، الـ pH/ORP، الكلور الحر، ومعدلات التدفق في هيكل صناعي واحد معزول ومقاوم للعوامل الجوية.",
+    keyBenefits: [
+      "Large icon-driven color touchscreen with live trending charts",
+      "Up to 8 direct digital/analog sensor inputs and 12 powered relays",
+      "Built-in Ethernet with Modbus TCP, BACnet, and Walchem Cloud IoT",
+      "Advanced control algorithms including feed-bleed interlocks and biocide timers",
+      "NEMA 4X / IP65 industrial washdown enclosure",
+    ],
+    keyBenefitsAr: [
+      "شاشة لمس ملونة تفاعلية مع رسوم بيانية لحظية ومتابعة اتجاهات القياس",
+      "دعم حتى 8 مدخلات حساسات مباشرة و 12 مرحل تشغيل لمضخات وصمامات التحكم",
+      "اتصال مدمج عبر إيثرنت وبروتوكولات Modbus TCP و BACnet والربط السحابي",
+      "خوارزميات تحكم ذكية تشمل الترابط بين التصريف والحقن ومؤقتات المبيدات",
+      "هيكل صناعي معتمد NEMA 4X / IP65 مقاوم للغسيل والظروف القاسية",
+    ],
+    applications: ["Cooling Tower Concentration Control & Biocide Cycling", "High-Pressure Boiler Surface Blowdown", "Industrial Dual-pH Neutralization", "Drinking Water Multi-Parameter Disinfection"],
+    applicationsAr: ["التحكم في تركيز وتصريف أبراج التبريد وحقن المبيدات", "إدارة التصريف السطحي لغلايات البخار", "محطات معادلة الـ pH للصرف الصناعي", "مراقبة وتطهير شبكات مياه الشرب متعددة القياسات"],
+    specifications: [
+      { label: "Enclosure Rating", labelAr: "درجة حماية الهيكل", value: "NEMA 4X / IP65 Polycarbonate" },
+      { label: "Sensor Inputs", labelAr: "مدخلات الحساسات", value: "Up to 8 (pH, ORP, Conductivity, Chlorine, Disinfection, 4-20mA)" },
+      { label: "Control Relays", labelAr: "مرحلات التحكم", value: "Up to 12 electromechanical / solid state relays" },
+      { label: "Analog Outputs", labelAr: "المخرجات التناظرية", value: "Up to 16 isolated 4-20mA outputs" },
+      { label: "Communications", labelAr: "بروتوكولات الاتصال", value: "Ethernet, USB, Modbus TCP/RTU, BACnet, Cellular" },
+      { label: "Display", labelAr: "الشاشة", value: "5.7-inch Color Graphic Touchscreen (320 x 240)" },
+    ],
+    documents: [
+      { name: "Walchem W900 Technical Datasheet", type: "PDF", size: "2.4 MB" },
+      { name: "W900 Cooling Tower Control Guide", type: "PDF", size: "1.8 MB" },
+      { name: "W900 Modbus Integration Manual", type: "PDF", size: "3.1 MB" },
+    ],
+    relatedSolutionIds: ["cooling-water", "boiler-steam", "industrial-water", "wastewater"],
+    relatedTechnologyIds: ["monitoring-control", "sensors-measurement", "chemical-dosing"],
+  },
+  {
+    id: "walchem-w600",
+    slug: "walchem-w600",
+    name: "Walchem W600 Series Compact Water Controller",
+    nameAr: "وحدة التحكم المدمجة Walchem W600",
+    partnerId: "walchem",
+    partnerName: "Walchem",
+    category: "Controllers & Automation",
+    categoryAr: "وحدات التحكم والأتمتة",
+    imageUrl: getAssetUrl("/images/products/walchem-w600.png"),
+    shortDesc:
+      "Compact, versatile dual-sensor controller ideal for dedicated cooling towers, boilers, and standalone disinfection packages.",
+    shortDescAr:
+      "وحدة تحكم مدمجة وعالية الكفاءة، مثالية لأبراج التبريد الفردية، الغلايات، ومحطات التعقيم المستقلة.",
+    fullOverview:
+      "The Walchem W600 provides sophisticated control capabilities in a compact form factor. Equipped with an intuitive touchscreen and multi-language support, it simplifies setup while delivering advanced data logging and remote monitoring.",
+    fullOverviewAr:
+      "توفر سلسلة Walchem W600 تحكماً فائق التطور في حجم مدمج وسهل التركيب. مجهزة بشاشة لمس ذكية وتدعم لغات متعددة، وتوفر حفظاً دقيقاً لسجلات البيانات مع إمكانية المراقبة عن بُعد.",
+    keyBenefits: [
+      "Icon-driven graphic touchscreen with on-screen diagnostics",
+      "Up to 2 direct analytical sensor inputs and 6 powered relays",
+      "Integrated datalogging with USB download & Ethernet web server",
+      "Pre-configured control modes for bleed, proportional feed, and biocide timers",
+    ],
+    keyBenefitsAr: [
+      "شاشة لمس رسومية مع تشخيص لحظي للأعطال",
+      "دعم مدخلين لحساسات القياس المباشر و 6 مرحلات تحكم",
+      "تسجيل مدمج للبيانات مع إمكانية التنزيل عبر USB والويب",
+      "أوضاع تحكم مبرمجة مسبقاً للتصريف والحقن المتناسب ومؤقتات التطهير",
+    ],
+    applications: ["Single-Tower HVAC Cooling", "Small/Medium Boiler Blowdown", "Secondary Disinfection Loops", "Plating & Rinse Tank Control"],
+    applicationsAr: ["أبراج تبريد التكييف الفردية", "غلايات البخار الصغيرة والمتوسطة", "دوائر التطهير الثانوي", "أحواض الطلاء والشطف الصناعي"],
+    specifications: [
+      { label: "Enclosure Rating", labelAr: "درجة حماية الهيكل", value: "NEMA 4X / IP65" },
+      { label: "Sensor Inputs", labelAr: "مدخلات الحساسات", value: "2 Direct Inputs (Conductivity, pH/ORP, Disinfection)" },
+      { label: "Relay Outputs", labelAr: "مرحلات التشغيل", value: "Up to 6 Relays" },
+      { label: "Communications", labelAr: "الاتصال", value: "Ethernet Web Server, USB Datalogging" },
+    ],
+    documents: [
+      { name: "Walchem W600 Product Specification", type: "PDF", size: "1.9 MB" },
+    ],
+    relatedSolutionIds: ["cooling-water", "boiler-steam", "potable-drinking"],
+    relatedTechnologyIds: ["monitoring-control", "sensors-measurement"],
+  },
+  {
+    id: "walchem-e-series",
+    slug: "walchem-e-series",
+    name: "Walchem E-Series Electronic Solenoid Metering Pumps",
+    nameAr: "مضخات الحقن الإلكترونية الرقمية Walchem E-Series",
+    partnerId: "walchem",
+    partnerName: "Walchem",
+    category: "Chemical Dosing",
+    categoryAr: "الحقن الكيميائي",
+    imageUrl: getAssetUrl("/images/products/walchem-e-series.png"),
+    shortDesc:
+      "High-speed solenoid metering pumps with 360 SPM, auto-degassing heads, and digital pulse/4-20mA pacing.",
+    shortDescAr:
+      "مضخات حقن كيميائي فائقة السرعة والدقة (360 نبضة/دقيقة) مع رؤوس تفريغ غازي تلقائي وتحكم رقمي وتناظري.",
+    fullOverview:
+      "The E-Series metering pumps combine micro-processor digital electronics with robust diaphragm mechanics. With turndown ratios up to 1800:1 and specialized liquid end materials (PVDF, PTFE, Ceramic), they handle corrosive acids, biocides, and viscous polymers with precision.",
+    fullOverviewAr:
+      "تجمع مضخات E-Series بين التحكم الرقمي الذكي والمتانة الميكانيكية للدايافرام المقوى. مع نطاق تحكم واسع ومواد مقاومة للتآكل (PVDF, PTFE, سيراميك)، تقوم بحقن أشد الأحماض والبوليمرات لزوجة وأكثرها عدوانية بأعلى درجات الأمان.",
+    keyBenefits: [
+      "High stroke speed up to 360 strokes/minute for smooth chemical distribution",
+      "Auto-degassing head option eliminates air-binding on chlorine/peroxide applications",
+      "External pulse multiplication/division and 4-20mA analog pacing",
+      "Manual and digital stroke length / frequency adjustments",
+    ],
+    keyBenefitsAr: [
+      "سرعة نبض عالية تصل إلى 360 نبضة في الدقيقة لضمان توزيع متجانس للمركب",
+      "رؤوس تفريغ غازي تلقائي تقضي تماماً على مشاكل احتباس الغازات مع مركبات الكلور",
+      "تحكم بالنبضات الرقمية وإشارات 4-20mA من العدادات وأجهزة التحليل",
+      "معايرة يدوية ورقمية لطول وتردد النبضة بدقة متناهية",
+    ],
+    applications: ["Biocide Injection for Cooling Towers", "Acid/Caustic pH Control", "Boiler Oxygen Scavenger & Cetamine Feeding", "RO Scale Inhibitor Dosing"],
+    applicationsAr: ["حقن المبيدات لأبراج التبريد", "ضبط الـ pH بالأحماض والقلويات", "حقن كواشط الأكسجين والأمينات للغلايات", "حقن مضادات الترسيب لمحطات الـ RO"],
+    specifications: [
+      { label: "Flow Rate Capacity", labelAr: "سعة التدفق", value: "0.05 to 75 L/hr (0.01 to 20 GPH)" },
+      { label: "Maximum Pressure", labelAr: "أقصى ضغط تشغيل", value: "Up to 17 bar (250 PSI)" },
+      { label: "Liquid End Materials", labelAr: "مواد تلامس السائل", value: "PVDF, CPVC, Acrylic, 316SS with Ceramic/PTFE valves" },
+      { label: "Control Modes", labelAr: "أوضاع التحكم", value: "Manual, Pulse Multiplier/Divider, 4-20mA Proportional" },
+    ],
+    documents: [
+      { name: "E-Series Solenoid Metering Brochure", type: "PDF", size: "2.1 MB" },
+    ],
+    relatedSolutionIds: ["cooling-water", "boiler-steam", "ro-membrane", "wastewater"],
+    relatedTechnologyIds: ["chemical-dosing", "monitoring-control"],
+  },
+  {
+    id: "timex-saf",
+    slug: "timex-saf",
+    name: "TIMEX SAF Automatic Self-Cleaning Screen Filters",
+    nameAr: "فلاتر الشاشات ذاتية التنظيف TIMEX SAF",
+    partnerId: "timex",
+    partnerName: "TIMEX",
+    category: "Filtration Systems",
+    categoryAr: "أنظمة الترشيح الصناعي",
+    imageUrl: getAssetUrl("/images/products/timex-saf.png"),
+    shortDesc:
+      "Heavy-duty electric suction-scanning automatic screen filters with zero flow interruption and multi-layer stainless steel mesh.",
+    shortDescAr:
+      "فلاتر شاشات فولاذية للخدمة الشاقة بنظام المسح بالشفط الكهربائي، توفر تنظيفاً ذاتياً بنسبة 100% دون أي توقف لتدفق المياه.",
+    fullOverview:
+      "TIMEX SAF Series filters are engineered for harsh industrial raw water and cooling tower applications. When differential pressure reaches 0.5 bar, an electric motor rotates an internal scanner while opening an exhaust valve, vacuum-cleaning the screen in just 15 seconds without stopping downstream delivery.",
+    fullOverviewAr:
+      "صُممت فلاتر TIMEX SAF للمياه الخام الصعبة وأحواض أبراج التبريد الصناعية. عند وصول فرق الضغط إلى 0.5 بار، يقوم محرك كهربي بتدوير ماسحات الشفط الداخلية مع فتح صمام الطرد، ليتم تنظيف الشاشة بالشفط المركز خلال 15 ثانية فقط دون انقطاع مياه المصنع.",
+    keyBenefits: [
+      "Continuous uninterrupted water flow to facility during backwash",
+      "Suction scanner cleans 100% of screen surface area with focused vacuum",
+      "Minimal flush water consumption (<1% of system throughput)",
+      "Screen filtration degrees available from 10 to 3000 microns",
+      "Epoxy-coated carbon steel or full 316L stainless steel vessels",
+    ],
+    keyBenefitsAr: [
+      "استمرار تدفق المياه النظيفة للمنشأة دون انقطاع أثناء دورة الغسيل العكسي",
+      "ماسحات الشفط تنظف 100% من مساحة الشاشة بقوة تفريغ مركزة",
+      "استهلاك ضئيل جداً لمياه الصرف أثناء الغسيل (<1% من إجمالي التدفق)",
+      "درجات ترشيح متعددة تبدأ من 10 ميكرون وحتى 3000 ميكرون",
+      "أوعية فولاذية معالجة بالإيبوكسي المقاوم أو من الفولاذ المقاوم للصدأ 316L",
+    ],
+    applications: ["Cooling Tower Basin Side-Stream Cleaning", "RO Pre-Treatment SDI Control", "River / Canal Water Intake Filtration", "Nozzle & Spray Header Protection"],
+    applicationsAr: ["ترشيح جانبي لأحواض أبراج التبريد لمنع تراكم الطمي", "حماية أغشية الـ RO وخفض مؤشر كثافة الطمي SDI", "ترشيح مآخذ مياه النيل والترع الصناعية", "حماية الفوهات والرشاشات والمبادلات من الانسداد"],
+    specifications: [
+      { label: "Flow Rate Range", labelAr: "نطاق معدل التدفق", value: "10 to 1,500 m³/hr per unit (scalable manifolds)" },
+      { label: "Filtration Degree", labelAr: "دقة الترشيح", value: "10 to 3,000 microns (Multi-layer sintered mesh)" },
+      { label: "Working Pressure", labelAr: "ضغط التشغيل", value: "1.5 to 16 bar" },
+      { label: "Flushing Duration", labelAr: "زمن دورة الغسيل", value: "15 to 25 seconds" },
+      { label: "Flushing Water Volume", labelAr: "حجم مياه الغسيل", value: "25 to 120 Liters per cycle" },
+    ],
+    documents: [
+      { name: "TIMEX SAF Engineering Datasheet", type: "PDF", size: "3.4 MB" },
+      { name: "Cooling Tower Side-Stream Filtration Guide", type: "PDF", size: "2.2 MB" },
+    ],
+    relatedSolutionIds: ["cooling-water", "ro-membrane", "industrial-water", "process-water"],
+    relatedTechnologyIds: ["filtration"],
+  },
+  {
+    id: "timex-disc",
+    slug: "timex-disc",
+    name: "TIMEX Automatic Disc Filtration Systems",
+    nameAr: "منظومات فلاتر الأقراص التلقائية TIMEX",
+    partnerId: "timex",
+    partnerName: "TIMEX",
+    category: "Filtration Systems",
+    categoryAr: "أنظمة الترشيح الصناعي",
+    imageUrl: getAssetUrl("/images/products/timex-disc.png"),
+    shortDesc:
+      "Depth-filtration disc modules engineered for organic and fibrous particulate capture with high solids-holding capacity.",
+    shortDescAr:
+      "فلاتر أقراص ثلاثية الأبعاد مصممة لاحتجاز الشوائب العضوية والألياف بقدرة استيعاب هائلة للرواسب الصلبة.",
+    fullOverview:
+      "TIMEX Disc filters utilize compressed grooved polypropylene discs that create a 3D matrix of microscopic filtration channels. During backwash, hydraulic pressure releases disc compression, allowing high-velocity reverse jets to spin and clean the discs instantly.",
+    fullOverviewAr:
+      "تستخدم فلاتر الأقراص من TIMEX أقراصاً مخددة ومضغوطة تصنع شبكة ترشيح ثلاثية الأبعاد لحجز العوالق العضوية والجسيمات. وأثناء الغسيل العكسي، يفك الضغط الهيدروليكي انضغاط الأقراص لتدور بسرعات عالية تحت نفاثات مائية تنظفها تماماً في ثوانٍ.",
+    keyBenefits: [
+      "Superior 3D depth capture for algae, organics, and deformable particles",
+      "Corrosion-free polymeric manifolds and disc stacks",
+      "Modular bank architecture easily expands for growing facility flow rates",
+      "Sequential backwash keeps main line operating at full capacity",
+    ],
+    keyBenefitsAr: [
+      "احتجاز عميق فائق للطحالب والمواد العضوية والجسيمات اللينة",
+      "مجمعات وهياكل بوليمرية مقاومة للتآكل والأملاح بنسبة 100%",
+      "بنية تركيبية قابلة للتوسع مع زيادة تدفقات المنشأة المستقبلية",
+      "غسيل تسلسلي يضمن استمرار إمداد المياه دون أي انخفاض في الضغط",
+    ],
+    applications: ["Surface & River Water Pre-Treatment", "Wastewater Polishing for Irrigation", "RO Membrane Pre-Filtration", "Industrial Process Water Recirculation"],
+    applicationsAr: ["المعالجة الأولية للمياه السطحية ومياه الأنهار", "تنقية مياه الصرف المعالجة لأغراض الري", "الترشيح الأولي لأغشية التناضح العكسي", "إعادة تدوير مياه العمليات الصناعية"],
+    specifications: [
+      { label: "Filtration Degree", labelAr: "دقة الترشيح", value: "20, 50, 100, 130, 200, 400 microns" },
+      { label: "Operating Pressure", labelAr: "ضغط التشغيل", value: "1.0 to 10 bar" },
+      { label: "Disc Material", labelAr: "مادة الأقراص", value: "High-grade Polypropylene" },
+      { label: "Flow Capacity", labelAr: "سعة التدفق", value: "5 to 2,000 m³/hr (Modular batteries)" },
+    ],
+    documents: [
+      { name: "TIMEX Disc Filtration Technical Catalog", type: "PDF", size: "2.8 MB" },
+    ],
+    relatedSolutionIds: ["process-water", "ro-membrane", "wastewater"],
+    relatedTechnologyIds: ["filtration"],
+  },
+  {
+    id: "timex-daf",
+    slug: "timex-daf",
+    name: "TIMEX Dissolved Air Flotation (DAF) Systems",
+    nameAr: "أنظمة التعويم بالهواء المذاب TIMEX DAF",
+    partnerId: "timex",
+    partnerName: "TIMEX",
+    category: "Wastewater Separation",
+    categoryAr: "فصل ومعالجة الصرف الصناعي",
+    imageUrl: getAssetUrl("/images/products/timex-daf.png"),
+    shortDesc:
+      "Advanced DAF clarifiers for ultra-fast removal of free/emulsified oils, grease, suspended solids, and chemical flocs.",
+    shortDescAr:
+      "وحدات ترويق متطورة بالتعويم بالهواء المذاب لفصل الزيوت والشحوم والعوالق والندف الكيميائية بسرعة وكفاءة فائقة.",
+    fullOverview:
+      "TIMEX DAF units dissolve pressurized air into a recycled effluent stream. Upon depressurization into the flotation basin, micro-bubbles (20-40 microns) attach to flocculated solids and float them into a dense surface blanket, cleanly separated by counter-current skimmers.",
+    fullOverviewAr:
+      "تقوم وحدات TIMEX DAF بإذابة الهواء تحت الضغط في تيار مياه معالج. وعند تحرير الضغط في حوض التعويم، تلتصق فقاعات هواء ميكرونية دقيقة (20-40 ميكرون) بالندف العالقة لترفعها إلى السطح كطبقة طفو كثيفة تُكشط آلياً وتفصل المياه النقية بأسفل الحوض.",
+    keyBenefits: [
+      "TSS reduction up to 95% and Oil & Grease removal up to 99%",
+      "Small footprint compared to traditional gravity settling clarifiers",
+      "High solids sludge concentration reduces dewatering volume",
+      "Corrosion-resistant 304/316L stainless steel design",
+    ],
+    keyBenefitsAr: [
+      "خفض المواد العالقة TSS حتى 95% وإزالة الزيوت والشحوم حتى 99%",
+      "مساحة سطحية صغيرة جداً مقارنة بمروقات الترسيب التقليدية",
+      "تركيز عالٍ للحمأة المجمعة مما يقلل تكاليف نزع المياه والتخلص منها",
+      "هيكل متين من الفولاذ المقاوم للصدأ 304/316L",
+    ],
+    applications: ["Food & Beverage Oily Effluent", "Refinery & Petrochemical Wastewater", "Industrial Pre-Treatment Before Discharge", "Sludge Thickening Applications"],
+    applicationsAr: ["مياه الصرف الزيتي لمصانع الأغذية والمشروبات", "مياه الصرف لمصافي البترول والبتروكيماويات", "المعالجة الأولية قبل شبكة الصرف العمومية", "تطبيقات تركيز وتكثيف الحمأة"],
+    specifications: [
+      { label: "Flow Capacity", labelAr: "سعة المعالجة", value: "5 to 600 m³/hr per unit" },
+      { label: "Bubble Size", labelAr: "حجم الفقاعات", value: "20 to 40 microns" },
+      { label: "Materials", labelAr: "المواد", value: "AISI 304 / 316L Stainless Steel" },
+    ],
+    documents: [
+      { name: "TIMEX DAF Flotation Brochure", type: "PDF", size: "4.1 MB" },
+    ],
+    relatedSolutionIds: ["wastewater", "industrial-water"],
+    relatedTechnologyIds: ["filtration", "water-treatment-chemicals"],
+  },
+  {
+    id: "kurita-cetamine",
+    slug: "kurita-cetamine",
+    name: "Kurita Cetamine® Film-Forming Amine Technology",
+    nameAr: "تكنولوجيا الأمينات الغشائية Kurita Cetamine®",
+    partnerId: "kurita",
+    partnerName: "Kurita Europe",
+    category: "Boiler & Steam Chemistry",
+    categoryAr: "كيمياء الغلايات والبخار",
+    imageUrl: getAssetUrl("/images/products/kurita-cetamine.png"),
+    shortDesc:
+      "All-volatile organic filming amine program that forms a monomolecular protective barrier on all metal surfaces across feedwater, boiler, steam, and condensate lines.",
+    shortDescAr:
+      "برنامج أمينات عضوية متطايرة يكون غشاءً جزيئياً واقياً على كافة الأسطح المعدنية من مياه التغذية إلى الغلاية ومواسير البخار والمتكاثف.",
+    fullOverview:
+      "Kurita Cetamine® revolutionizes boiler treatment by replacing conventional solid salt conditioning (phosphates, sulphites, caustic) with volatile film-forming polyamines. By maintaining a hydrophobic protective film, it stifles corrosion and scale while allowing boiler blowdown to be reduced dramatically.",
+    fullOverviewAr:
+      "تحدث تكنولوجيا Cetamine® من Kurita ثورة في معالجة الغلايات باستبدال الأملاح الصلبة التقليدية (الفوسفات والكبريتات) بأمينات غشائية متطايرة. وبفضل الغشاء الواقي العازل، تمنع التآكل والترسبات وتتيح خفض التصريف السطحي بشكل هائل وتوفير الوقود والمياه.",
+    keyBenefits: [
+      "Comprehensive corrosion protection across the entire steam-water cycle",
+      "Blowdown reduction up to 50%, saving significant fuel and softened water",
+      "Zero salt contribution to boiler water TDS",
+      "Preserves equipment during operational standby and dry/wet layup",
+    ],
+    keyBenefitsAr: [
+      "حماية شاملة من التآكل تمتد لكافة أجزاء دائرة البخار والمتكاثف",
+      "تقليل التصريف السطحي بنسبة تصل إلى 50% مما يوفر الوقود والمياه المعالجة",
+      "خلو تام من إضافة أملاح صلبة تزيد ملوحة مياه الغلاية",
+      "حفظ وتخميل الغلايات أثناء فترات التوقف والتخزين الجاف أو الرطب",
+    ],
+    applications: ["Industrial Steam Boilers & Heat Recovery Steam Generators (HRSG)", "District Heating & Closed Hot Water Circuits", "Food & Pharmaceutical Clean Steam Networks", "Turbine Condenser Preservation"],
+    applicationsAr: ["غلايات البخار الصناعية ومولدات استعادة الحرارة HRSG", "شبكات التدفئة المركزية والدوائر المغلقة", "شبكات البخار لمصانع الأغذية والأدوية", "حماية وتخميل مكثفات التوربينات البخارية"],
+    specifications: [
+      { label: "Active Compounds", labelAr: "المادة الفعالة", value: "Surface-active film-forming aliphatic polyamines" },
+      { label: "Thermal Stability", labelAr: "الثبات الحراري", value: "Stable up to supercritical steam conditions (>550°C)" },
+      { label: "Dosage Control", labelAr: "التحكم في الجرعة", value: "Photometric residual Cetamine testing and pH monitoring" },
+    ],
+    documents: [
+      { name: "Kurita Cetamine Boiler Technology Whitepaper", type: "PDF", size: "3.7 MB" },
+      { name: "Cetamine Energy & Water Savings Case Studies", type: "PDF", size: "2.5 MB" },
+    ],
+    relatedSolutionIds: ["boiler-steam", "industrial-water"],
+    relatedTechnologyIds: ["water-treatment-chemicals", "chemical-dosing"],
+  },
+  {
+    id: "kurita-kuriverter",
+    slug: "kurita-kuriverter",
+    name: "Kurita Kuriverter® High-Recovery RO Antiscalants & Biocides",
+    nameAr: "مضادات الترسيب والمطهرات Kurita Kuriverter® لأغشية الـ RO",
+    partnerId: "kurita",
+    partnerName: "Kurita Europe",
+    category: "Membrane Treatment Chemistry",
+    categoryAr: "كيماويات أغشية التناضح العكسي",
+    imageUrl: getAssetUrl("/images/products/kurita-kuriverter.png"),
+    shortDesc:
+      "High-performance polymeric scale inhibitors and biofouling controllers engineered to push reverse osmosis recovery up to 85%+.",
+    shortDescAr:
+      "بوليمرات متطورة لمنع الترسيب ومكافحة الأغشية الحيوية مصممة لرفع معدلات استخلاص محطات التناضح العكسي لأكثر من 85%.",
+    fullOverview:
+      "Kuriverter® scale inhibitors disperse insoluble calcium carbonate, calcium sulfate, barium sulfate, and silica up to 300% saturation. Combined with Kuriverter® non-oxidizing membrane biocides, they maintain normalized permeate flow and prevent costly membrane replacements.",
+    fullOverviewAr:
+      "تقوم مضادات الترسيب Kuriverter® بتشتيت وتثبيط ترسبات كربونات الكالسيوم، كبريتات الباريوم، والسيليكا حتى 300% من حد التشبع. وعند دمجها مع مطهرات Kuriverter® غير المؤكسدة، تحافظ على نقاء وتدفق الأغشية وتطيل عمرها التشغيلي لسنوات.",
+    keyBenefits: [
+      "Controls extreme silica concentrations up to 240 ppm at reject stream",
+      "Reduces Clean-in-Place (CIP) frequency from monthly to annually",
+      "NSF / ANSI Standard 60 certified for potable water production",
+      "Compatible with all polyamide thin-film composite (TFC) membranes",
+    ],
+    keyBenefitsAr: [
+      "التحكم في تركيزات السيليكا العالية حتى 240 جزء في المليون في خط الصرف",
+      "تقليل عدد مرات الغسيل الكيميائي للأغشية من شهرياً إلى سنوياً",
+      "معتمدة بشهادة NSF / ANSI 60 لإنتاج مياه الشرب النقية",
+      "متوافقة تماماً مع كافة أغشية البولي أميد الرقيقة TFC العالمية",
+    ],
+    applications: ["Seawater & Brackish Water Desalination Plants", "Industrial High-Recovery RO Systems", "Wastewater Effluent RO Recycling", "Semiconductor & Pharma Ultrapure Pretreatment"],
+    applicationsAr: ["محطات تحلية مياه البحر والمياه الجوفية المالحة", "محطات الـ RO الصناعية ذات الاستخلاص المرتفع", "إعادة تدوير مياه الصرف الصناعي بالأغشية", "محطات المياه فائقة النقاء لصناعات الإلكترونيات والأدوية"],
+    specifications: [
+      { label: "Certifications", labelAr: "الشهادات والاعتمادات", value: "NSF/ANSI Standard 60, ISO 9001, ISO 14001" },
+      { label: "Specific Gravity", labelAr: "الكثافة النوعية", value: "1.15 to 1.25 g/cm³" },
+      { label: "pH Range", labelAr: "نطاق الـ pH الفعال", value: "Active across pH 2.0 to 12.0" },
+    ],
+    documents: [
+      { name: "Kuriverter Antiscalant Product Data Sheet", type: "PDF", size: "1.6 MB" },
+    ],
+    relatedSolutionIds: ["ro-membrane", "process-water"],
+    relatedTechnologyIds: ["water-treatment-chemicals"],
+  },
+];

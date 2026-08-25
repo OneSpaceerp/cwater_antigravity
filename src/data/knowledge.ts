@@ -1,0 +1,307 @@
+export interface Article {
+  id: string;
+  slug: string;
+  title: string;
+  titleAr: string;
+  category: string;
+  categoryAr: string;
+  readTime: string;
+  readTimeAr: string;
+  summary: string;
+  summaryAr: string;
+  question: string;
+  questionAr: string;
+  engineeringExplanation: string[];
+  engineeringExplanationAr: string[];
+  diagnosticChecklist: string[];
+  diagnosticChecklistAr: string[];
+  whenToCallEngineer: string;
+  whenToCallEngineerAr: string;
+  relatedSolutionIds: string[];
+  relatedProductIds: string[];
+}
+
+export const knowledgeData: Article[] = [
+  {
+    id: "scale-causes-cooling-towers",
+    slug: "scale-causes-cooling-towers",
+    title: "What Causes Scale in Cooling Towers and How to Prevent It",
+    titleAr: "ما هي أسباب تكون الترسبات في أبراج التبريد وكيفية الوقاية الهندسية منها؟",
+    category: "Cooling Water",
+    categoryAr: "مياه التبريد",
+    readTime: "6 min read",
+    readTimeAr: "قراءة 6 دقائق",
+    summary:
+      "A deep engineering breakdown of supersaturation, calcium carbonate precipitation kinetics, heat flux dynamics, and modern polymeric inhibition strategies.",
+    summaryAr:
+      "تحليل هندسي عميق لظاهرة فوق التشبع، حركية ترسيب كربونات الكالسيوم، ديناميكا الحمل الحراري، واستراتيجيات التثبيط البوليمري الحديثة.",
+    question: "Why does scale form on heat exchanger tubes even when make-up water appears clear and potable?",
+    questionAr: "لماذا تتكون الترسبات على أنابيب المبادلات الحرارية حتى لو كانت مياه التغذية نقية وصالحة للشرب ظاهرياً؟",
+    engineeringExplanation: [
+      "Cooling towers evaporate pure water vapor (H2O), leaving dissolved minerals behind. As water recirculates, mineral ion concentrations multiply by the Cycles of Concentration (CoC).",
+      "Calcium Carbonate (CaCO3) exhibits inverse solubility: unlike sugar or salt, calcium carbonate becomes LESS soluble as temperature increases. As a result, the hottest surface in the entire loop—the heat exchanger tube wall—becomes the primary zone of rapid precipitation.",
+      "Langelier Saturation Index (LSI) and Ryznar Stability Index (RSI) calculate this thermodynamic drive. When LSI exceeds +1.5 without chemical dispersants, scale crystals precipitate spontaneously on tube metal.",
+      "Modern specialty polymers (such as Kurita maleic/sulfonate terpolymers) act by crystal distortion and threshold inhibition: sub-stoichiometric polymer molecules adsorb onto nascent crystal growth sites, preventing adherence to metallurgy.",
+    ],
+    engineeringExplanationAr: [
+      "تقوم أبراج التبريد بتبخير بخار الماء النقي فقط، تاركةً كافة الأملاح الذائبة في الحوض. ومع تكرار دوران المياه، تتضاعف تركيزات الأيونات بما يعرف بـ 'دورات التركيز' (CoC).",
+      "تتميز كربونات الكالسيوم (CaCO3) بذائبية عكسية فريدة: على عكس السكر أو ملح الطعام، تصبح كربونات الكالسيوم أقل قابلية للذوبان مع ارتفاع درجة الحرارة. ونتيجة لذلك، فإن أكثر الأسطح سخونة في الدائرة—وهي جدران أنابيب المبادلات الحرارية—تصبح المركز الأول للترسيب السريع.",
+      "تحسب مؤشرات LSI و RSI هذه القوة الديناميكية الحرارية. فعندما يتجاوز مؤشر LSI قيمة +1.5 دون وجود مشتتات بوليمرية، تتبلور قشور الكالسيوم الصلبة مباشرة على المعدن.",
+      "تعمل البوليمرات الحديثة من Kurita عبر تشويه الشبكة البلورية والتثبيط العتبي، حيث تلتصق جزيئات البوليمر بنوى البلورات النامية لتمنع التصاقها بالأسطح المعدنية وتتركها معلقة ليتم تصريفها بأمان.",
+    ],
+    diagnosticChecklist: [
+      "Measure make-up water total hardness, calcium, total alkalinity, and pH.",
+      "Calculate true Cycles of Concentration (Conductivity_tower ÷ Conductivity_makeup, and verify against Chloride ratio).",
+      "Inspect approach temperatures on chiller condensers (a rising approach temperature indicates fouling/scale).",
+      "Verify automatic blowdown controller sensor calibration and solenoid valve seating.",
+      "Ensure scale inhibitor chemical dosing pump is delivering proportional to make-up water volume.",
+    ],
+    diagnosticChecklistAr: [
+      "قياس القساوة الكلية، الكالسيوم، القلوية الكلية، والـ pH لمياه التعويض.",
+      "حساب دورات التركيز الحقيقية (توصيلية البرج ÷ توصيلية التعويض، والتحقق عبر نسبة الكلوريد).",
+      "مراقبة درجات حرارة الاقتراب (Approach Temp) للمكثفات (ارتفاع القيمة يعني تراكم عازل للرواسب).",
+      "التحقق من معايرة حساس التوصيلية للوحة التحكم وسلامة إغلاق صمام التصريف الآلي.",
+      "التأكد من أن مضخة حقن مانع الترسيب تعمل بنظام التناسب مع عداد مياه التعويض.",
+    ],
+    whenToCallEngineer:
+      "If condenser approach temperature rises by more than 1.5°C or blowdown conductivity fluctuates uncontrollably, contact C-Water for a full LSI water audit and automated controller inspection.",
+    whenToCallEngineerAr:
+      "إذا ارتفعت درجة حرارة اقتراب المكثف بأكثر من 1.5 درجة مئوية أو كانت قراءات التوصيلية متذبذبة، تواصل مع مهندسي C-Water لإجراء تدقيق تشبع شامل وفحص أجهزة التحكم.",
+    relatedSolutionIds: ["cooling-water", "industrial-water"],
+    relatedProductIds: ["walchem-w900", "kurita-cetamine", "timex-saf"],
+  },
+  {
+    id: "conductivity-in-cooling-towers",
+    slug: "conductivity-in-cooling-towers",
+    title: "What Does Conductivity Tell You About a Cooling Tower?",
+    titleAr: "ماذا تكشف لك قراءة التوصيلية الكهربية عن حالة برج التبريد؟",
+    category: "Monitoring & Control",
+    categoryAr: "المراقبة والتحكم",
+    readTime: "5 min read",
+    readTimeAr: "قراءة 5 دقائق",
+    summary:
+      "How electrical conductivity serves as the real-time operational proxy for dissolved solids, cycles of concentration, and blowdown automation.",
+    summaryAr:
+      "كيف تعمل التوصيلية الكهربية كمؤشر لحظي دقيق للأملاح الذائبة الكلية، دورات التركيز، وأتمتة تصريف الأبراج.",
+    question: "Why is conductivity the single most critical parameter continuously monitored in cooling tower loops?",
+    questionAr: "لماذا تعد التوصيلية الكهربية هي المعيار الأهم والأول الذي يُقاس لحظياً في كافة دوائر التبريد؟",
+    engineeringExplanation: [
+      "Electrical conductivity (measured in microSiemens per centimeter, μS/cm) reflects the total concentration of dissolved ionic minerals (Ca2+, Mg2+, Na+, Cl-, SO4(2-)) carrying electric current through water.",
+      "Because evaporative cooling removes pure H2O, ionic concentration rises continuously. Conductivity provides a dependable, instantaneous linear proxy for Total Dissolved Solids (TDS ≈ Conductivity × 0.65 to 0.75).",
+      "Automated controllers like the Walchem W900 compare tower conductivity against programmed setpoints. When conductivity reaches the target limit, the controller actuates a blowdown valve to purge high-mineral water while introducing fresh make-up.",
+      "Toroidal (electrodeless) conductivity sensors are mandatory in industrial cooling loops because traditional contacting electrodes rapidly foul with oil, biological slime, or mineral deposits, causing false low readings that prevent blowdown.",
+    ],
+    engineeringExplanationAr: [
+      "تعبر التوصيلية الكهربية (بالميكروسيمنز/سم μS/cm) عن التركيز الإجمالي للأيونات المعدنية الذائبة التي تنقل التيار الكهربي في الماء.",
+      "نظراً لأن التبخير يزيل الماء النقي فقط، فإن تركيز الأيونات يرتفع باستمرار. وتوفر التوصيلية مقياساً خطياً لحظياً للأملاح الذائبة الكلية (TDS ≈ التوصيلية × 0.7 تقريباً).",
+      "تقوم لوحات التحكم الذكية مثل Walchem W900 بمقارنة التوصيلية اللحظية بالقيمة المطلوبة، وفور تجاوز الحد الآمن تفتح صمام التصريف للتخلص من المياه عالية الأملاح وسحب مياه تعويض نقية.",
+      "يعد استخدام الحساسات الحلقية الكهرومغناطيسية (Toroidal) أمراً أساسياً في التطبيقات الصناعية لأن الحساسات ذات الأقطاب المعدنية التقليدية تتغطى سريعاً بالزيوت والرواسب مما يعطي قراءات خاطئة تمنع التصريف.",
+    ],
+    diagnosticChecklist: [
+      "Verify calibration of the online toroidal sensor against a calibrated handheld meter monthly.",
+      "Check that the sample flow rate across the sensor manifold is continuous (minimum 3 to 5 GPM).",
+      "Ensure temperature compensation (automatic PT100/PT1000) is enabled and reading correctly.",
+      "Confirm the bleed valve opens cleanly and does not stick partially open when de-energized.",
+    ],
+    diagnosticChecklistAr: [
+      "التحقق من معايرة الحساس الحلقي شهرياً بمقارنته بجهاز قياس يدوي معاير.",
+      "التأكد من استمرار تدفق عينة الماء عبر مجمع الحساس بمعدل مناسب دون ركود.",
+      "التأكد من تفعيل خاصية التعويض الحراري الآلي (Automatic Temp Compensation).",
+      "فحص سلامة غلق وفتح صمام التصريف الآلي وعدم وجود تسريب مستمر.",
+    ],
+    whenToCallEngineer:
+      "If conductivity spikes rapidly despite continuous blowdown or if your system suffers from sensor fouling drift, consult C-Water for toroidal sensor retrofits and blowdown valve sizing.",
+    whenToCallEngineerAr:
+      "إذا استمر ارتفاع التوصيلية رغم فتح صمام التصريف أو كنت تعاني من انحراف قراءات الحساسات، استشر مهندسي C-Water لتحديث الحساسات ومعايرة المنظومة.",
+    relatedSolutionIds: ["cooling-water", "industrial-water"],
+    relatedProductIds: ["walchem-w900", "walchem-w600"],
+  },
+  {
+    id: "ro-membrane-fouling-causes",
+    slug: "ro-membrane-fouling-causes",
+    title: "What Causes RO Membrane Fouling and How to Prevent It",
+    titleAr: "ما هي أسباب انسداد وتدهور أغشية التناضح العكسي (RO) وكيف تتجنبها؟",
+    category: "RO & Membranes",
+    categoryAr: "التناضح العكسي والأغشية",
+    readTime: "7 min read",
+    readTimeAr: "قراءة 7 دقائق",
+    summary:
+      "A forensic review of colloidal, organic, biological, and mineral fouling mechanisms in reverse osmosis systems, and engineering defenses.",
+    summaryAr:
+      "تشريح هندسي دقيق لآليات الانسداد الغروي، العضوي، البكتيري والمعدني لأغشية التناضح العكسي وحلول الحماية المتكاملة.",
+    question: "Why do reverse osmosis membranes lose permeate production and suffer high differential pressure over time?",
+    questionAr: "لماذا تفقد محطات التناضح العكسي إنتاجيتها وترتفع ضغوط التشغيل تدريجياً بمرور الوقت؟",
+    engineeringExplanation: [
+      "RO membranes operate as molecular sieves under hydraulic pressures exceeding osmotic pressure. Water passes through 0.2-nanometer pores while 99%+ of salts and contaminants are rejected at the membrane boundary layer.",
+      "Concentration Polarization creates a stagnant layer adjacent to the membrane where contaminant concentration is several times higher than bulk feed. Without adequate cross-flow velocity and chemical dispersion, precipitation occurs.",
+      "Colloidal fouling (clays, silica, iron) typically affects lead membrane elements (Stage 1). Mineral scaling (CaSO4, CaCO3, BaSO4, SiO2) concentrates on tail elements (Stage 2/3) where recovery is highest.",
+      "Biofouling creates an irreversible extracellular slime layer that shields bacteria from chemical biocides and causes severe differential pressure (DP) spikes across pressure vessels.",
+    ],
+    engineeringExplanationAr: [
+      "تعمل أغشية التناضح العكسي كمرشحات جزيئية متناهية الدقة تحت ضغوط تفوق الضغط الأسموزي، حيث يمر الماء النقي عبر مسام 0.2 نانومتر بينما تُحجز الأملاح بنسبة تفوق 99%.",
+      "تؤدي ظاهرة استقطاب التركيز (Concentration Polarization) لتكون طبقة راكدة ملاصقة للغشاء يرتفع فيها تركيز الأملاح لأضعاف مياه التغذية، مما يسبب الترسيب السريع في حال غياب مضادات الترسيب.",
+      "يستقر الانسداد الغروي (الطمي والحديد) في مقدمة الأغشية (المرحلة الأولى)، بينما تترسب الأملاح المعدنية والسيليكا في الأغشية النهائية (المرحلة الثانية) حيث يبلغ تركيز الأملاح أقصاه.",
+      "يصنع التلوث البيولوجي طبقة لزجة تحمي المستعمرات البكتيرية وترفع فرق الضغط (DP) داخل أوعية الضغط وتخفض كمية المياه المنتجة.",
+    ],
+    diagnosticChecklist: [
+      "Monitor normalized permeate flow, normalized salt rejection, and normalized differential pressure daily.",
+      "Test raw feedwater Silt Density Index (SDI15) — must remain below 3.0 before RO membrane entry.",
+      "Verify ORP / residual free chlorine is strictly 0.00 ppm to prevent polyamide membrane oxidation.",
+      "Audit antiscalant dosing pump stroke rate and check chemical day tank concentration.",
+      "Inspect cartridge filter differential pressure — replace elements when delta-P reaches 0.8 bar.",
+    ],
+    diagnosticChecklistAr: [
+      "متابعة معدلات التدفق المعياري ونسبة حجز الأملاح المعيارية وفرق الضغط يومياً.",
+      "قياس مؤشر كثافة الطمي (SDI15) لمياه التغذية — يجب أن يقل دائماً عن 3.0 قبل دخول الأغشية.",
+      "التأكد من أن جهد الأكسدة (ORP) والكلور الحر = 0.00 ppm تماماً لمنع أكسدة وتمزق الأغشية.",
+      "تدقيق عمل مضخة حقن مضاد الترسيب ومراجعة تركيز البرميل اليومي.",
+      "فحص فرق الضغط على فلاتر الخراطيش واستبدالها فور وصول الفرق إلى 0.8 بار.",
+    ],
+    whenToCallEngineer:
+      "If normalized differential pressure increases by 15% or permeate production drops by 10%, execute a tailored CIP immediately with C-Water specialized Kuriverter® cleaners before fouling becomes irreversible.",
+    whenToCallEngineerAr:
+      "إذا ارتفع فرق الضغط المعياري بنسبة 15% أو انخفض تدفق المياه النقية بنسبة 10%، يجب إجراء غسيل كيميائي متخصص فوراً بكيماويات Kuriverter® من C-Water قبل تلف الأغشية الدائم.",
+    relatedSolutionIds: ["ro-membrane", "process-water"],
+    relatedProductIds: ["kurita-kuriverter", "timex-disc", "walchem-w900"],
+  },
+  {
+    id: "automated-chemical-dosing",
+    slug: "automated-chemical-dosing",
+    title: "How Automated Chemical Dosing Optimizes Industrial Systems",
+    titleAr: "كيف يحقق الحقن الكيميائي الآلي أعلى درجات الكفاءة والأمان للمصانع؟",
+    category: "Chemical Dosing",
+    categoryAr: "الحقن الكيميائي",
+    readTime: "5 min read",
+    readTimeAr: "قراءة 5 دقائق",
+    summary:
+      "Why manual bucket dosing and fixed timer pumps waste chemicals, damage metallurgy, and how closed-loop digital feedback solves the problem.",
+    summaryAr:
+      "لماذا يتسبب الحقن اليدوي والمضخات المؤقتة في هدر الكيماويات وتلف المعدات، وكيف تحل أنظمة التغذية المرتدة الرقمية هذه المعضلة.",
+    question: "Why is automated proportional dosing fundamentally superior to manual chemical feeding?",
+    questionAr: "لماذا يتفوق الحقن الكيميائي الآلي المتناسب كلياً على طرق التغذية اليدوية والتقليدية؟",
+    engineeringExplanation: [
+      "Industrial water demand and evaporation rates fluctuate constantly with ambient weather, production load changes, and varying raw water quality.",
+      "Fixed-rate or timer-based dosing injects the same volume of chemicals regardless of actual demand: under heavy production loads, chemical concentration drops into scaling/corrosion zones; under low loads, expensive chemicals are wasted and discharged to drain.",
+      "Closed-loop automation utilizes analytical sensors (pH, ORP, Conductivity, Fluorescence) to modulate dosing pump stroke speed instantaneously via 4-20mA or digital pulse signals.",
+      "Walchem E-Series pumps feature turndown ratios up to 1800:1 and microprocessor control, eliminating overdosing spikes and maintaining critical active chemical ppm within a ±2% target band 24 hours a day.",
+    ],
+    engineeringExplanationAr: [
+      "تتغير معدلات استهلاك المياه والتبخير في المصانع باستمرار مع تقلبات درجات الحرارة وتغير أحمال الإنتاج وتفاوت جودة المياه الخام.",
+      "تقوم المضخات التقليدية ذات المؤقتات بحقن نفس الكمية الثابتة: فعند ذروة الإنتاج ينخفض تركيز المادة الفعالة وتتعرض المعدات للتآكل والترسب، وعند انخفاض الأحمال تُهدر الكيماويات الباهظة مع التصريف.",
+      "تعتمد الأتمتة ذات الدائرة المغلقة على حساسات تحليلية لحظية لتعديل سرعة وتردد نبضات مضخات الحقن آلياً عبر إشارات رقمية وتناظرية دقيقة.",
+      "توفر مضخات Walchem E-Series نطاق تحكم واسع يصل إلى 1800:1 مع تحكم ميكروبروسيسور يحافظ على تركيز المادة الفعالة ضمن نطاق ±2% طوال 24 ساعة دون أي هدر.",
+    ],
+    diagnosticChecklist: [
+      "Check chemical injection quills for internal check valve scaling or back-pressure leakage.",
+      "Ensure dosing pump suction tubing has foot valve and weight submerged properly.",
+      "Verify calibration of the flowmeter sending pulse inputs to the chemical controller.",
+      "Inspect chemical day tanks for sludge accumulation or crystallization.",
+    ],
+    diagnosticChecklistAr: [
+      "فحص صمامات الحقن (Injection Quills) والتأكد من عدم انسدادها بالرواسب.",
+      "التأكد من سلامة صمام السحب السفلي (Foot Valve) وثباته بقاع خزان الكيماويات.",
+      "التحقق من دقة ومعايرة عداد المياه المغذي لإشارات النبض للوحة التحكم.",
+      "فحص خزانات الكيماويات والتأكد من عدم وجود تبلور أو ترسبات بالقاع.",
+    ],
+    whenToCallEngineer:
+      "If your facility is still operating manual chemical dosing or experiencing erratic residual levels, contact C-Water to design a custom automated dosing skid.",
+    whenToCallEngineerAr:
+      "إذا كانت منشأتك لا تزال تعتمد على الحقن اليدوي أو تعاني من تذبذب تركيز الكيماويات، تواصل مع C-Water لتصميم وتوريد لوحة حقن رقمية ذكية.",
+    relatedSolutionIds: ["cooling-water", "boiler-steam", "wastewater"],
+    relatedProductIds: ["walchem-e-series", "walchem-w900"],
+  },
+  {
+    id: "boiler-blowdown-energy-use",
+    slug: "boiler-blowdown-energy-use",
+    title: "How Boiler Blowdown Affects Water and Energy Consumption",
+    titleAr: "كيف يؤثر التصريف السطحي للغلايات على استهلاك الوقود والمياه؟",
+    category: "Boiler Water",
+    categoryAr: "مياه الغلايات والبخار",
+    readTime: "6 min read",
+    readTimeAr: "قراءة 6 دقائق",
+    summary:
+      "Thermodynamic calculations of sensible heat loss in boiler blowdown, and how automated conductivity blowdown combined with Cetamine® amine chemistry saves fuel.",
+    summaryAr:
+      "الحسابات الديناميكية الحرارية لفقدان الطاقة في مياه التصريف الساخنة، وكيف توفر أنظمة التحكم الآلي وكيمياء Cetamine® آلاف الأمتار المكعبة من الوقود سنوياً.",
+    question: "How does unoptimized boiler blowdown translate directly into inflated fuel and treated water costs?",
+    questionAr: "كيف يتحول التصريف السطحي غير المحكم للغلايات إلى خسائر مباشرة في فواتير الوقود والمياه المعالجة؟",
+    engineeringExplanation: [
+      "As feedwater transforms into steam in a boiler, non-volatile dissolved solids concentrate inside the boiler drum. To prevent foaming, carryover, and scale, a portion of water must be discharged as blowdown.",
+      "Boiler blowdown water is at the saturated steam temperature and pressure of the boiler (e.g., 184°C at 10 bar). Discharging this water purges massive amounts of sensible enthalpy that was already heated with expensive fuel.",
+      "Manual blowdown valves are typically cracked open wider than necessary to 'play it safe', resulting in blowdown rates of 8% to 12% instead of the optimal 3% to 5%.",
+      "Automated continuous surface blowdown controllers (Walchem W900) monitor high-temperature conductivity continuously, opening modulated motorized control valves only when TDS approaches exact ASME / EN limits.",
+      "Combining automated blowdown with Kurita Cetamine® film-forming amines eliminates solid salt addition entirely, allowing boilers to safely run at lower blowdown volumes with up to 50% blowdown reduction.",
+    ],
+    engineeringExplanationAr: [
+      "مع تحول مياه التغذية إلى بخار، تتركز الأملاح الذائبة داخل أسطوانة الغلاية. ولتجنب فوران الماء وحمل الأملاح مع البخار، يجب تصريف جزء من المياه كـ 'تصريف سطحي' (Blowdown).",
+      "تكون مياه التصريف عند نفس درجة حرارة وضغط البخار المشبع (مثلاً 184°م عند ضغط 10 بار). وتصريف هذه المياه يهدر كميات هائلة من الطاقة الحرارية التي تم دفع ثمنها وقوداً.",
+      "يقوم المشغلون عادة بفتح صمامات التصريف اليدوية بنسبة أكبر من اللازم كإجراء احترازي، مما يرفع نسبة التصريف إلى 10% أو 12% بدلاً من النسبة الهندسية المثلى 3% إلى 5%.",
+      "تقوم وحدات تحكم Walchem W900 المخصصة للغلايات بمراقبة التوصيلية اللحظية تحت الضغط والحرارة العالية، لتفتح الصمام الموتوري بدقة فقط عند اقتراب الأملاح من الحد المسموح به دولياً.",
+      "دمج التحكم الآلي مع تكنولوجيا Cetamine® من Kurita يزيل إضافة الأملاح الصلبة تماماً، مما يتيح تشغيل الغلاية بأعلى كفاءة وخفض مياه التصريف بنسبة تصل إلى 50%.",
+    ],
+    diagnosticChecklist: [
+      "Calculate boiler blowdown percentage: (Feedwater Silica ÷ Boiler Silica) × 100 or through TDS ratio.",
+      "Inspect high-temperature conductivity sample cooler and sensor integrity.",
+      "Measure fuel consumption and steam production to determine boiler evaporation ratio.",
+      "Evaluate heat recovery opportunities using flash steam tanks and blowdown heat exchangers.",
+    ],
+    diagnosticChecklistAr: [
+      "حساب نسبة التصريف الحقيقية: (سيليكا مياه التغذية ÷ سيليكا مياه الغلاية) × 100.",
+      "فحص مبرد العينات ومجس التوصيلية المخصص لدرجات الحرارة والضغوط العالية.",
+      "مقارنة استهلاك الوقود بإنتاجية البخار لحساب كفاءة التبخير الإجمالية.",
+      "دراسة جدوى استعادة الحرارة من مياه التصريف عبر مبادلات حرارية لتسخين مياه التغذية.",
+    ],
+    whenToCallEngineer:
+      "If your boiler blowdown exceeds 6% of feedwater or condensate piping suffers from frequent leaks, contact C-Water for a comprehensive boiler energy audit.",
+    whenToCallEngineerAr:
+      "إذا تجاوزت نسبة تصريف الغلاية 6% من مياه التغذية أو كنت تعاني من تآكل خطوط المتكاثف، تواصل مع C-Water لإجراء تدقيق طاقة شامل للغلايات.",
+    relatedSolutionIds: ["boiler-steam", "industrial-water"],
+    relatedProductIds: ["kurita-cetamine", "walchem-w900", "walchem-e-series"],
+  },
+  {
+    id: "filtration-protects-equipment",
+    slug: "filtration-protects-equipment",
+    title: "How Physical Filtration Protects Downstream Treatment Equipment",
+    titleAr: "كيف يحمي الترشيح الفيزيائي معدات المعالجة والمبادلات الحرارية؟",
+    category: "Filtration",
+    categoryAr: "الترشيح والفصل",
+    readTime: "5 min read",
+    readTimeAr: "قراءة 5 دقائق",
+    summary:
+      "The critical synergy between physical solids removal (TIMEX filters) and chemical programs: eliminating under-deposit corrosion and nozzle clogging.",
+    summaryAr:
+      "التكامل الهندسي بين الإزالة الفيزيائية للشوائب (فلاتر TIMEX) والبرامج الكيميائية: القضاء على التآكل تحت الرواسب وانسداد الفوهات.",
+    question: "Why can't chemical water treatment programs succeed without proper upstream physical filtration?",
+    questionAr: "لماذا لا يمكن لأي برنامج معالجة كيميائية أن ينجح دون ترشيح فيزيائي أولي فعال؟",
+    engineeringExplanation: [
+      "Suspended solids (sand, silt, biological debris, pipe scale) settle out in low-velocity zones of cooling tower basins, chiller tubes, and shell-and-tube exchangers.",
+      "Settled particulate creates 'Under-Deposit Corrosion': bacteria and acidic concentration cells thrive beneath the sediment layer where corrosion inhibitors cannot physically penetrate.",
+      "TIMEX automatic self-cleaning screen filters remove suspended particles down to 10-50 microns, keeping heat transfer surfaces clean so Kurita corrosion inhibitors can establish a uniform molecular protective film.",
+      "Side-stream filtration (filtering 10% to 20% of cooling tower recirculating flow) continuously polishes basin water, preventing suspended solids from accumulating and eliminating the need for periodic manual basin shovel-outs.",
+    ],
+    engineeringExplanationAr: [
+      "تترسب المواد العالقة والرمال وقشور الصدأ في المناطق ذات السرعات المنخفضة داخل أحواض أبراج التبريد والمبادلات الحرارية.",
+      "تتسبب هذه الرواسب في ظاهرة 'التآكل تحت الرواسب' (Under-Deposit Corrosion)، حيث تنشط البكتيريا اللاهوائية والأحماض تحت طبقة الطمي في بيئة يستحيل لمثبطات التآكل الوصول إليها وحماية المعدن.",
+      "تقوم فلاتر الشاشات ذاتية التنظيف من TIMEX بحجز العوالق حتى 10-50 ميكرون، مما يحافظ على نظافة المعدن ويسمح لمركبات Kurita الكيميائية بتكوين طبقة حماية متجانسة.",
+      "يوفر الترشيح الجانبي (تنقية 10% إلى 20% من تدفق البرج باستمرار) تنقية دائمة للمياه، مما يمنع تراكم الطمي بالحوض ويلغي الحاجة للتنظيف اليدوي المجهد.",
+    ],
+    diagnosticChecklist: [
+      "Measure cooling tower basin water Turbidity (NTU) and Total Suspended Solids (TSS).",
+      "Inspect filter screen mesh for mechanical damage, blinding, or calcium carbonate scale encrustation.",
+      "Verify differential pressure switch/transducer accurately triggers automatic backwash cycles.",
+      "Check flush drain piping to confirm backwash flow is uninhibited and discharged properly.",
+    ],
+    diagnosticChecklistAr: [
+      "قياس درجة العكارة (NTU) ونسبة المواد الصلبة العالقة (TSS) في حوض البرج والمصدر.",
+      "فحص شاشة الفلتر للتأكد من سلامتها وعدم وجود تمزق أو تكلس كربوني.",
+      "التحقق من دقة حساس فرق الضغط في بدء دورات الغسيل العكسي التلقائي.",
+      "التأكد من سريان خط تصريف مياه الغسيل العكسي بحرية ودون أي انسداد.",
+    ],
+    whenToCallEngineer:
+      "If your heat exchangers require frequent rodding or cooling tower basins accumulate heavy sludge, consult C-Water for a custom TIMEX automatic filtration skid.",
+    whenToCallEngineerAr:
+      "إذا كانت مبادلاتك الحرارية تتطلب تسليكاً ميكانيكياً متكرراً أو تتراكم الرمال بأحواض الأبراج، استشر C-Water لتوريد نظام ترشيح ذاتي متكامل من TIMEX.",
+    relatedSolutionIds: ["cooling-water", "industrial-water", "ro-membrane"],
+    relatedProductIds: ["timex-saf", "timex-disc"],
+  },
+];
